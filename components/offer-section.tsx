@@ -17,12 +17,12 @@ export default function OfferSection() {
           
 
           {/* GRID CONTAINER */}
-          <div className="relative bgGridLines z-10 grid grid-cols-1 lg:grid-cols-3 items-center gap-12 overflow-visible">
+          <div className="relative bgGridLines z-10 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
 
             {/* LEFT TEXT */}
             
            
-              <h2 className="text-4xl font-bold text-primary ">
+              <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
               Have a Project Idea?
               <br />
               <span className="text-secondary">Let's Talk!</span>
@@ -34,7 +34,7 @@ export default function OfferSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex justify-start relative -top-4 -left-21 w-64 h-80 md:w-95 md:h-100"
+              className="hidden md:flex justify-start relative -top-4 -left-21 w-64 h-80 md:w-95 md:h-100"
             >
               
                 <img
@@ -58,7 +58,7 @@ export default function OfferSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-card text-base max-w-sm text-center lg:text-left"
+              className="hidden md:flex text-card text-base max-w-sm text-center lg:text-left"
             >
               Mattis ante vel malesuada vestibulum sed. Ac velit eget dis nunc
               vulputate felis.
@@ -66,7 +66,7 @@ export default function OfferSection() {
 
               {/* INPUT GROUP */}
               <div className="w-full max-w-sm mt-4">
-                <div className="flex items-center w-full rounded-full p-1 bg-gradient-to-r from-[#1e9fa8]/70 to-[#1a7f8f]/70 backdrop-blur-md border border-white/20 shadow-lg">
+                <div className="mb-20 md:mb-0 flex items-center w-full rounded-full p-1 bg-gradient-to-r from-[#1e9fa8]/70 to-[#1a7f8f]/70 backdrop-blur-md border border-white/20 shadow-lg">
                   <TextField
                     placeholder="Enter Your Email"
                     variant="outlined"
@@ -99,6 +99,7 @@ export default function OfferSection() {
                       bg-[#c4e962]
                       shadow-[0_0_25px_rgba(196,233,98,0.5)]
                       whitespace-nowrap
+                      text-base
                     "
                   >
                     Get Started
