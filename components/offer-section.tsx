@@ -5,7 +5,7 @@ import { TextField } from "@mui/material";
 
 export default function OfferSection() {
   return (
-    <section className="pt-[80px] px-6 bg-card -mb-8">
+    <section className="pt-[80px] px-6 bg-card -mb-8 " id="contact">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -23,7 +23,7 @@ export default function OfferSection() {
             
            
               <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
-              Have a Project Idea?
+              Have a  Idea?
               <br />
               <span className="text-secondary">Let's Talk!</span>
             </h2>

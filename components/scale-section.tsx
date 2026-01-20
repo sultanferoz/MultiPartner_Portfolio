@@ -5,7 +5,7 @@ import { url } from "inspector";
 
 export default function ScaleSection() {
   return (
-    <section className="py-20 px-6 bg-[#f5f5f5]">
+    <section className="py-20 px-6 bg-[#f5f5f5]" id="about">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
