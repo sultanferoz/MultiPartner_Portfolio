@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { url } from "inspector";
+// import { url } from "inspector";
 
 export default function ScaleSection() {
   return (
