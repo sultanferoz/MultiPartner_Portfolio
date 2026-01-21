@@ -36,7 +36,7 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-[#3a8b95] to-[#2a6b75]" id="faqs">
+    <section className="py-20 px-6 bg-gradient-to-br from-[#3a8b95] to-[#2a6b75]" id="faq">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}

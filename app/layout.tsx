@@ -8,11 +8,11 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "MultiPartner_Portfolio",
   description:
-    "Combining World-Class Technology with a Nationwide Team of Experts for a Simple, Efficient, and Scalable Model",
+    "The web sites is build for multi partners companies to share there contributtion tto world!",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes",
-    generator: 'v0.app'
+    generator: 'SF_laskir'
 }
 
 export default function RootLayout({
