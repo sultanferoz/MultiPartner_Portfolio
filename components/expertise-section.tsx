@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function ExpertiseSection() {
   return (
@@ -66,9 +67,12 @@ export default function ExpertiseSection() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#4a9ba5] to-[#3a8b95] p-8 h-96 md:h-[500px] flex items-center justify-center">
-              <img
+              <Image
                 src="/professional-team-working-together-with-laptop.jpg"
                 alt="Professional team"
+                width={100}
+                height={100}
+                 priority
                 className="w-full h-full object-cover rounded-2xl"
               />
 

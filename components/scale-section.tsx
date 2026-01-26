@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 // import { url } from "inspector";
 
 export default function ScaleSection() {
@@ -35,9 +36,12 @@ export default function ScaleSection() {
             whileHover={{ scale: 1.02 }}
             className="relative  rounded-3xl overflow-hidden "
           >
-            <img
-              src="/damei.png"
+            <Image
+              src="/damei.webp"
               alt="Professional man"
+              width={100}
+              height={100}
+               priority
               className="aspect-square object-cover object-top w-full h-"
             />
 

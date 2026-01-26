@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TextField } from "@mui/material";
+import Image from "next/image";
 
 export default function OfferSection() {
   return (
@@ -15,11 +16,8 @@ export default function OfferSection() {
           className="relative rounded-3xl  bg-muted px-8  md:px-16"
         >
           
-
-          {/* GRID CONTAINER */}
           <div className="relative bgGridLines z-10 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
 
-            {/* LEFT TEXT */}
             
            
               <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
@@ -37,9 +35,12 @@ export default function OfferSection() {
               className="hidden md:flex justify-start relative -top-4 -left-21 w-64 h-80 md:w-95 md:h-100"
             >
               
-                <img
-                  src="/professional-woman-in-business-outfit-pointing.jpg"
+                <Image
+                  src="/professional-woman-in-business-outfit-pointing.webp"
                   alt="Special offer"
+                  height={100}
+                  width={100}
+                   priority
                   className="w-full h-full object-cover object-start"
                 />
             

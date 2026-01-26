@@ -1,47 +1,44 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
-
-// Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"
-
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import Image from "next/image"
 
 const testimonials = [
   {
     name: "Gary Beasley",
     role: "CEO & Co-Founder Roofstock",
     text: "As the leading experts in single-family rentals, Roofstock has combined some of the smartest people in the business with robust data science",
-    image: "/professional-man-headshot.png",
+    image: "/professional-man-headshot.webp",
   },
   {
     name: "Sarah Johnson",
     role: "Director of Real Estate",
     text: "Their market insights helped us achieve record growth. The team's expertise in data analytics is truly exceptional.",
-    image: "/professional-woman-in-business-outfit-pointing.jpg",
+    image: "/professional-woman-in-business-outfit-pointing.webp",
   },
   {
     name: "Michael Chen",
     role: "Investment Manager",
     text: "Working with this team transformed our investment strategy. Their data-driven approach delivers consistent results.",
-    image: "/professional-man-suit.png",
+    image: "/professional-man-suit.webp",
   },
   {
     name: "Jessica Williams",
     role: "Portfolio Director",
     text: "The combination of expert knowledge and advanced data science gave us a significant competitive advantage.",
-    image: "/professional-headshot.png",
+    image: "/professional-headshot.webp",
   },
   {
     name: "David Rodriguez",
     role: "Acquisitions Lead",
     text: "Outstanding service and insights. Their platform has become an essential tool for our investment decisions.",
-    image: "/professional-team-working-together-with-laptop.jpg",
+    image: "/professional-team-working-together-with-laptop.webp",
   },
 ]
 
@@ -111,7 +108,10 @@ export default function TestimonialsSection() {
                       
                       {/* Image container */}
                       <div className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
-                        <img
+                        <Image
+                        width={100}
+                        height={100}
+                         priority
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"

@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { TextField } from "@mui/material";
-import heroimg from "@/public/lady.png";
+import heroimg from "@/public/lady.webp";
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <section className="bgGridLines relative pt-32 lg:pt-16 pb-4 px-6 bg-[#239ba4]  flex items-start">
-      {/* Background decorative elements */}
+      
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -154,6 +154,7 @@ export default function HeroSection() {
               <Image
                 src={heroimg}
                 alt="heroimage"
+                 priority
                 className="relative md:-bottom-24 xl:-left-20 md:-left-8 bottom-2 -left-4"
               />
             </motion.div>
