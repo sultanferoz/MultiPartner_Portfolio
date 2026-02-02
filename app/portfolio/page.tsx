@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/testimonials-section";
 import PortfolioPage from "@/components/portfolio-section";
 import PortfolioData from "@/components/porfolio-data";
 import OfferSection from "@/components/offer-section";
+import EducationAndCerts from "@/components/education-sectioin";
 
 export default function TeamPage() {
   return (
@@ -12,6 +13,7 @@ export default function TeamPage() {
       <Navbar />
       <PortfolioPage/>
       <TestimonialsSection/>
+      <EducationAndCerts/>
       <PortfolioData/>
       <OfferSection/>
       <Footer />

@@ -146,7 +146,6 @@ export default function Navbar() {
       <AnimatePresence>
         {showModal && (
           <>
-            {/* Backdrop Blur Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

@@ -7,6 +7,8 @@ import ScaleSection from "@/components/who-section"
 import OfferSection from "@/components/offer-section"
 import Footer from "@/components/footer"
 import FAQs from "@/components/FAQs"
+import PortfolioPage from "@/components/portfolio-section"
+import EducationAndCerts from "@/components/education-sectioin"
 
 export default function Home() {
   return (
@@ -15,8 +17,9 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <ExpertiseSection />
-      <ScaleSection />
+      <PortfolioPage/>
       <FAQs/>
+      <TestimonialsSection/>
       <OfferSection />
       <Footer />
     </main>

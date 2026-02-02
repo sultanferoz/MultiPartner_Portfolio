@@ -22,7 +22,7 @@ export default function HeroSection() {
     const subject = "New Contact Request";
     const body = `Hello,\n\nMy email is: ${email}\n\nI would like to get in touch.`;
 
-    window.location.href = `mailto:dammie.emiola@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:damilola.emiola@xxx.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   };
@@ -41,9 +41,9 @@ export default function HeroSection() {
           >
             <div className="space-y-4">
               <h1 className=" text-[42px]  lg:text-6xl font-medium text-white md:leading-tight  !capitalize">
-                Damilola Emiola
+                DCode Analytics
                 <span className="block text-[#c4e962]  text-sm  lg:text-base leading-wide">
-                  Data Scientist | AI Automation Developer
+                  Data Scientists | AI Automation Developers
                 </span>
               </h1>
               <p className="text-xs lg:text-base text-white/80 max-w-2xl">

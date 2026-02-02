@@ -6,39 +6,42 @@ import Image from "next/image";
 
 const TEAM_SLIDES = [
   {
-    name: "Mie Emiola",
+    name: "Damilola Emiola",
     role: "Lead Data Scientist & AI Specialist",
-    image: "/professional-headshot.webp",
+    image: "/damei.webp",
   },
   {
-    name: "Dr. Chen Liu",
-    role: "Senior Machine Learning Engineer",
-    image: "/professional-man-headshot.webp",
-  },
-  {
-    name: "Sarah Rodriguez",
-    role: "Data Engineering Manager",
-    image: "/professional-woman-in-business-outfit-pointing.webp",
-  },
-  {
-    name: "James K. Patel",
-    role: "Principal Analytics Consultant",
-    image: "/professional-man-suit.webp",
-  },
-  {
-    name: "Dr. Elena Volkova",
-    role: "NLP Research Lead",
-    image: "/professional-team-working-together-with-laptop.webp",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "DevOps & MLOps Engineer",
-    image: "/professional-headshot.webp",
-  },
-  {
-    name: "Aisha Mohammed",
-    role: "Data Visualization Director",
-    image: "/professional-woman-in-business-outfit-pointing.webp",
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
+  },{
+    name: "Damilola Emiola",
+    role: "Lead Data Scientist & AI Specialist",
+    image: "/damei.webp",
   },
 ];
 

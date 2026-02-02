@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Mail, Linkedin, Twitter } from "lucide-react"
+import { motion } from "framer-motion";
+import { Mail, Linkedin, Twitter } from "lucide-react";
 import logo from "@/public/favicon.webp";
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -20,23 +20,32 @@ export default function Footer() {
             className="md:col-span-2 sm:col-span-1"
           >
             <div className="flex items-center gap-2 mb-4">
-               <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer"
-          >
-            <Link href="/">
-              <Image src={logo} alt="logo" width={90} height={90} />
-            </Link>
-          </motion.div>
-              <span className="font-bold text-lg">Damilola</span>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <Link href="/">
+                  <Image src={logo} alt="logo" width={90} height={90} />
+                </Link>
+              </motion.div>
             </div>
-            <p className="text-sm text-white/60">
-            Contact Info
-            </p>
-              <h2 className="text-base font-bold text-primary ">
-              Mobile: 07831997881
+
+            <p className="text-sm text-white/60">Contact Info</p>
+            <h2 className="text-base font-bold text-primary ">
+              Mobile:
+              <span className="text-card"> 07831997881</span>
               <br />
-              <span className="text-card">Email: dammie.emiola@gmail.com</span>
+              UK:
+              <span className="text-card"> +447831997881</span>
+              <br />
+              Canada/US:
+              <span className="text-card"> +16472343153</span>
+              <br />
+              NG: 
+              <span className="text-card"> +2349024892746</span>
+              <br />
+              Email:
+              <span className="text-card"> damilola.emiola@xxx.com </span>
             </h2>
             <div className="flex gap-4 mt-6">
               {[Twitter, Mail, Linkedin].map((Icon, i) => (
@@ -99,7 +108,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Resources */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -107,7 +116,7 @@ export default function Footer() {
           >
             <h3 className="font-bold mb-6 text-[#c4e962]">Resources</h3>
             <ul className="space-y-3">
-              {["Power BI", " PMO", "BWPI", "NIPM","IDPPM",""].map((link) => (
+              {["Power BI", " PMO", "BWPI", "NIPM", "IDPPM", ""].map((link) => (
                 <li key={link}>
                   <motion.a
                     href="#"
@@ -119,7 +128,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Divider */}
@@ -135,15 +144,23 @@ export default function Footer() {
         >
           <p>© 2026 All rights reserved</p>
           <div className="flex gap-6">
-            <motion.a href="/about" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
+            <motion.a
+              href="/about"
+              whileHover={{ color: "#c4e962" }}
+              className="hover:text-[#c4e962] transition-colors"
+            >
               About
             </motion.a>
-            <motion.a href="/" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
+            <motion.a
+              href="/"
+              whileHover={{ color: "#c4e962" }}
+              className="hover:text-[#c4e962] transition-colors"
+            >
               Contact
             </motion.a>
           </div>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

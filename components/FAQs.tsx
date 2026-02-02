@@ -6,31 +6,32 @@ import { ChevronUp } from "lucide-react";
 
 const faqs_section = [
   {
-    question: "What is Damie’s professional background?",
+    question: "What is DCode Analytics?",
     answer:
-      "Damie is a Data Scientist and Microsoft Certified Power BI Data Analyst with over 7 years of experience in transforming complex data into actionable business insights through analytics, dashboards, and machine learning models.",
+      "DCode Analytics is a consulting firm specializing in data science, AI automation, and analytics solutions. We help organizations transform complex data into actionable insights, streamline operations with automation, and build scalable data-driven tools.",
   },
   {
-    question: "What technologies and tools does Damie specialize in?",
+    question: "What services does DCode Analytics offer?",
     answer:
-      "Damie specializes in Python (Pandas, PySpark, TensorFlow, Keras, OpenCV), SQL and T-SQL, Microsoft Power BI (DAX, M), and MATLAB for advanced data analysis, visualization, and predictive modeling.",
+      "DCode Analytics provides services in data analytics, AI and machine learning, Power BI dashboards, ETL and data pipeline automation, feature engineering, classification and forecasting models, natural language processing, and cloud-based data solutions.",
   },
   {
-    question: "What kind of projects has Damie worked on?",
+    question: "What technologies and tools does DCode Analytics specialize in?",
     answer:
-      "Damie has worked on Power BI dashboards, Power Apps solutions, backend investment management systems, deep learning image models, time series analysis, machine learning classification models, and computer vision research projects.",
+      "We specialize in Python (Pandas, PySpark, NLTK, TensorFlow, Keras, OpenCV), SQL and T-SQL, Microsoft Power BI (DAX, M), Azure Data Services, Databricks, Jupyter Notebooks, and AI tools like GPT-4 for automation and advanced analytics.",
   },
   {
-    question: "What is Damie’s educational background?",
+    question: "What kind of projects has DCode Analytics worked on?",
     answer:
-      "Damie holds an MSc in Artificial Intelligence (Distinction) from the University of East London and a BSc in Mathematics from Bowen University.",
+      "Our projects include developing interactive dashboards and web applications, automating data workflows, deploying AI-driven tools to streamline operations, designing scalable data models, and providing technical solutions for public sector and corporate clients.",
   },
   {
-    question: "Is Damie open to relocation and collaboration?",
+    question: "Is DCode Analytics open to collaboration and consulting engagements?",
     answer:
-      "Yes, Damie is willing to relocate and is open to collaborating on data-driven projects involving analytics, machine learning, business intelligence, and digital transformation.",
+      "Yes, DCode Analytics collaborates with organizations globally, offering consulting and hybrid engagement models to support analytics, AI automation, digital transformation, and data-driven decision-making.",
   },
 ];
+
 
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

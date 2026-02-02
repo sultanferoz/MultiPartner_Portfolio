@@ -116,7 +116,7 @@ export default function PortfolioPage() {
           className="text-center my-16 sm:my-24"
         >
            <h1 className=" text-[42px]  lg:text-6xl font-medium text-secondray md:leading-tight  !capitalize mb-4">
-               Staff Portfolio
+               Portfolio
               
               </h1>
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">

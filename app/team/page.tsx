@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import "../globals.css"
 import TestimonialsSection from "@/components/testimonials-section";
 import OfferSection from "@/components/offer-section";
+import FAQs from "@/components/FAQs";
 
 export default function TeamPage() {
   return (
@@ -12,6 +13,7 @@ export default function TeamPage() {
       <Navbar />
       <TeamHeroSection />
       <TeamMembersSection />
+      <FAQs/>
       <OfferSection/>
       <Footer />
     </main>
