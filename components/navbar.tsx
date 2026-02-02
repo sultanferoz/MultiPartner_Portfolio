@@ -162,12 +162,12 @@ export default function Navbar() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br bg-white  rounded-3xl shadow-2xl border border-white"
+                className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-secondary  rounded-3xl shadow-2xl border border-secondary"
               >
                 {/* Close Button */}
                 <button
                   onClick={closeModal}
-                  className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-secondary hover:text-primary transition-all"
+                  className="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-secondary hover:text-primary transition-all"
                 >
                   <X className="w-5 h-5" />
                 </button>

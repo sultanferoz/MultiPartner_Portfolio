@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Mail, Linkedin, Twitter } from "lucide-react"
+import logo from "@/public/favicon.webp";
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -14,13 +17,18 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="col-span-2 sm:col-span-1"
+            className="md:col-span-2 sm:col-span-1"
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#c4e962] rounded-full flex items-center justify-center">
-                <span className="text-[#1a2332] font-bold">⚡</span>
-              </div>
-              <span className="font-bold text-lg">Urit</span>
+               <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-2 cursor-pointer"
+          >
+            <Link href="/">
+              <Image src={logo} alt="logo" width={90} height={90} />
+            </Link>
+          </motion.div>
+              <span className="font-bold text-lg">Damilola</span>
             </div>
             <p className="text-sm text-white/60">
             Contact Info
@@ -127,11 +135,11 @@ export default function Footer() {
         >
           <p>© 2026 All rights reserved</p>
           <div className="flex gap-6">
-            <motion.a href="#" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
-              Privacy Policy
+            <motion.a href="/about" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
+              About
             </motion.a>
-            <motion.a href="#" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
-              Terms & Conditions
+            <motion.a href="/" whileHover={{ color: "#c4e962" }} className="hover:text-[#c4e962] transition-colors">
+              Contact
             </motion.a>
           </div>
         </motion.div>

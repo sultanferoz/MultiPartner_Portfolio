@@ -28,7 +28,7 @@ export default function OfferSection() {
   };
 
   return (
-    <section className=" px-2 lg:px-6 bg-card -mb-8 " id="contact">
+    <section className="  rounded-4xl bg-card -mb-8 " id="contact">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
