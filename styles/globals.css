@@ -1,20 +1,21 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  /* Updated color system for Urit theme */
+  --background: #239ba4;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #c4e962;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: #1a2332;
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --muted: #239ba4;
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
@@ -37,6 +38,12 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Urit Custom Colors */
+  --urit-teal: #4a9ba5;
+  --urit-lime: #c4e962;
+  --urit-dark: #1a2332;
+  --urit-light-gray: #f5f5f5;
 }
 
 .dark {
@@ -75,8 +82,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,7 +126,162 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-slate-900;
+
+  }
+  
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
+
+.bgGridLines {
+  position: relative;
+  background-color: #239ba4;
+  overflow: visible;
+}
+
+.bgGridLines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(to left, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+
+  -webkit-mask-image: radial-gradient(
+    circle at bottom right,
+    #000 0%,
+    #000 45%,
+    transparent 75%
+  );
+
+  mask-image: radial-gradient(
+    circle at bottom right,
+    #000 0%,
+    #000 45%,
+    transparent 75%
+  );
+}
+
+
+
+.glass-button {
+  background: rgba(196, 233, 98, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(196, 233, 98, 0.5);
+  box-shadow: 0 8px 32px rgba(196, 233, 98, 0.1);
+}
+
+.glass-button:hover {
+  background: rgba(196, 233, 98, 0.4);
+  border: 1px solid rgba(196, 233, 98, 0.7);
+  box-shadow: 0 12px 48px rgba(196, 233, 98, 0.2);
+}
+
+.water-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+  animation: water-wave 3s ease-in-out infinite;
+}
+
+@keyframes water-wave {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 0.5;
+  }
+}
+
+.team-circular-slider {
+
+
+  /* Center arc geometry */
+  .team-arc-mask {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  }
+  
+  
+  /* Fade edges for pixel-perfect look */
+  .team-arc-mask::before,
+  .team-arc-mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+  }
+  
+  
+  .team-arc-mask::before {
+  left: 0;
+  background: linear-gradient(to right, #239ba4 10%, transparent 100%);
+  }
+  
+  
+  .team-arc-mask::after {
+  right: 0;
+  background: linear-gradient(to left, #239ba4 10%, transparent 100%);
+  }
+  
+  
+  /* Avatar card look like reference */
+  .team-avatar {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+ #swipeContainer{
+  background-color: #000;
+
+}
+  
+  
+  /* Responsive geometry tuning */
+  @media (max-width: 640px) {
+  .team-circular-slider {
+  animation-duration: 40s;
+  }
+  }
+  
+  
+  @media (min-width: 1024px) {
+  .team-circular-slider {
+  animation-duration: 25s;
+  }
   }
 }

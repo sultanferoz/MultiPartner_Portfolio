@@ -1,7 +1,16 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import {
+  SiPython,
+  SiApachespark,
+  SiDatabricks,
+  SiGithub,
+  SiJupyter,
+  SiOpenai,
+  SiPostgresql,
+} from "react-icons/si";
+import { FaProjectDiagram, FaRobot, FaDatabase, FaCogs } from "react-icons/fa";
 
 export default function ExpertiseSection() {
   return (
@@ -15,22 +24,19 @@ export default function ExpertiseSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-[#1a2332] mb-6">
-              <span className="text-[#4a9ba5]">Powered By</span>
+            <h2 className="text-[32px] lg:text-[48px] font-bold text-[#1a2332] mb-8">
+              <span className="text-[#4a9ba5]">Achievements &</span>
               <br />
               Dedicated Expertise
             </h2>
-            <p className="text-gray-600 mb-8">
-              We're seasoned real estate experts who understand that the landscape is changing—and believe it's for the
-              better.
-            </p>
+            
 
             {/* Checkmarks */}
             <div className="space-y-4 mb-8">
               {[
-                "We partner with forward-thinking companies to scale",
-                "Empower their customers with transparency and predictability",
-                "Consultative approach on emerging technology.",
+                "Transport Policy Shift: Influenced TfL's launch of Off-Peak Fridays through my “Friday Effect” analysis, helping reshape commuter patterns and drive post-pandemic recovery in Central London.",
+                "AI Integration at Scale: Deployed GPT-4 automation to streamline data workflows, eliminating 96% of manual review time and setting the groundwork for AI-driven operations in planning.",
+                "Civic Data Engagement: Delivered the technical backbone for a mayoral exhibition on planning services, translating complex datasets into accessible visuals viewed by over 1k+ Londoners (est.).",
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -48,63 +54,50 @@ export default function ExpertiseSection() {
               ))}
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-[#1a2332] text-white rounded-full font-semibold hover:bg-[#2a3342] transition-colors"
-            >
-              Learn More
-            </motion.button>
+            
           </motion.div>
 
           {/* Right Image */}
+          {/* Right Expertise Grid */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.02 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#4a9ba5] to-[#3a8b95] p-8 h-96 md:h-[500px] flex items-center justify-center">
-              <Image
-                src="/professional-team-working-together-with-laptop.jpg"
-                alt="Professional team"
-                width={100}
-                height={100}
-                 priority
-                className="w-full h-full object-cover rounded-2xl"
-              />
+            <div className=" p-8 h-96  flex items-center justify-center">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-6 ">
+                {[
+                  { name: "Python / Pandas", icon: <SiPython /> },
+                  { name: "PySpark", icon: <SiApachespark /> },
+                  { name: "SQL", icon: <SiPostgresql /> },
+                  // { name: "Power BI", icon: <SiPowerbi /> },
+                  { name: "Data Pipelines", icon: <FaProjectDiagram /> },
+                  { name: "ETL Automation", icon: <FaCogs /> },
+                  { name: "Feature Eng.", icon: <FaDatabase /> },
+                  { name: "ML Models", icon: <FaRobot /> },
+                  { name: "Forecasting", icon: <FaProjectDiagram /> },
+                  { name: "NLP", icon: <FaRobot /> },
+                  { name: "GenAI", icon: <SiOpenai /> },
+                  // { name: "Azure", icon: <SiMicrosoftazuredevops /> },
 
-              {/* Team member badges */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-full px-4 py-2 shadow-xl flex items-center justify-between"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-[#4a9ba5]/20" />
-                  <span className="font-semibold text-sm text-[#1a2332]">Kenneth Allen</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-[#c4e962]/40 text-white text-xs flex items-center justify-center">
-                    💬
-                  </div>
-                  <span className="font-semibold text-sm text-[#1a2332]">James Hall</span>
-                </div>
-              </motion.div>
-
-              {/* Icon badges */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
-                {["📊", "📄", "📈"].map((icon, i) => (
+                  { name: "Databricks", icon: <SiDatabricks /> },
+                  { name: "GitHub", icon: <SiGithub /> },
+                  { name: "Jupyter", icon: <SiJupyter /> },
+                  { name: "Data Modeling", icon: <FaDatabase /> },
+                ].map((item, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ scale: 1.1 }}
-                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg text-lg"
+                    whileHover={{ scale: 1.15, y: -5 }}
+                    className="flex flex-col items-center  gap-2"
                   >
-                    {icon}
+                    <div className="w-14 h-14 rounded-full bg-muted hover:text-primary flex items-center justify-center shadow-xl text-secondary text-2xl">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs   text-secondary font-semibold text-center">
+                      {item.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -113,5 +106,5 @@ export default function ExpertiseSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -11,36 +11,37 @@ import Image from "next/image"
 
 const testimonials = [
   {
-    name: "Gary Beasley",
-    role: "CEO & Co-Founder Roofstock",
-    text: "As the leading experts in single-family rentals, Roofstock has combined some of the smartest people in the business with robust data science",
+    name: "Alex Morgan",
+    role: "Head of Customer Analytics, FinTech Platform",
+    text: "The CX dashboards and churn analytics completely changed how we understand customer behavior. The visual clarity and real-time insights helped our teams make faster, smarter decisions across every department.",
     image: "/professional-man-headshot.webp",
   },
   {
-    name: "Sarah Johnson",
-    role: "Director of Real Estate",
-    text: "Their market insights helped us achieve record growth. The team's expertise in data analytics is truly exceptional.",
+    name: "Priya Patel",
+    role: "Director of Business Intelligence, SaaS Company",
+    text: "Their demographic and transaction visualizations brought our data to life. The geographic mapping and KPI breakdowns gave our leadership team a clear, actionable view of performance across regions.",
     image: "/professional-woman-in-business-outfit-pointing.webp",
   },
   {
-    name: "Michael Chen",
-    role: "Investment Manager",
-    text: "Working with this team transformed our investment strategy. Their data-driven approach delivers consistent results.",
+    name: "Daniel Rivera",
+    role: "Investment Strategy Lead, Real Estate Analytics",
+    text: "The geo-location analytics and interactive data maps provided a level of insight we hadn’t seen before. It’s now a core part of how we evaluate markets and growth opportunities.",
     image: "/professional-man-suit.webp",
   },
   {
-    name: "Jessica Williams",
-    role: "Portfolio Director",
-    text: "The combination of expert knowledge and advanced data science gave us a significant competitive advantage.",
+    name: "Emily Chen",
+    role: "Product Operations Manager, Enterprise Software",
+    text: "The interaction flow dashboards and benefits tracking views streamlined our internal reporting. Everything is intuitive, fast, and designed with decision-makers in mind.",
     image: "/professional-headshot.webp",
   },
   {
-    name: "David Rodriguez",
-    role: "Acquisitions Lead",
-    text: "Outstanding service and insights. Their platform has become an essential tool for our investment decisions.",
+    name: "Marcus Lewis",
+    role: "Head of Digital Transformation, Consulting Firm",
+    text: "From animated data maps to advanced churn and transaction analytics, the portfolio work reflects a deep understanding of both business strategy and technical execution. Truly enterprise-grade delivery.",
     image: "/professional-team-working-together-with-laptop.webp",
   },
 ]
+
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -84,7 +85,13 @@ export default function TestimonialsSection() {
             }}
             breakpoints={{
               1024: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.4,
+              },
+               800: {
+                slidesPerView:2,
+              },
+               600: {
+                slidesPerView:1,
               },
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -129,7 +136,7 @@ export default function TestimonialsSection() {
                       </div>
 
                       {/* Testimonial text */}
-                      <p className="text-lg lg:text-xl text-gray-800 leading-relaxed mb-8 italic">
+                      <p className="text-[14px] md:text-lg lg:text-xl text-gray-800 leading-relaxed mb-2 md:mb-8 italic">
                         {testimonial.text}
                       </p>
 
@@ -138,10 +145,10 @@ export default function TestimonialsSection() {
 
                       {/* Name and role */}
                       <div>
-                        <h3 className="text-2xl lg:text-3xl font-bold text-[#1a2332] mb-2">
+                        <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#1a2332] mb-2">
                           {testimonial.name}
                         </h3>
-                        <p className="text-sm lg:text-base text-gray-600 font-medium">
+                        <p className="text-[10px] md:text-sm lg:text-base text-gray-600 font-medium">
                           {testimonial.role}
                         </p>
                       </div>

@@ -7,13 +7,14 @@ export default function Footer() {
   return (
     <footer className="relative bg-secondary text-white py-16 px-6 z-50">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-12">
           {/* Logo Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="col-span-2 sm:col-span-1"
           >
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-[#c4e962] rounded-full flex items-center justify-center">
