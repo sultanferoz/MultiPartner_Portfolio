@@ -125,7 +125,7 @@ export default function PortfolioData() {
   }
 
   return (
-    <section className="md:pb-20 md:pt-40 py-10 px-6 bg-[#f5f5f5]" id="my-work">
+    <section className="md:pb-20 md:pt-40 py-10 px-6 bg-[#f5f5f5] mb-[80px]" id="my-work">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

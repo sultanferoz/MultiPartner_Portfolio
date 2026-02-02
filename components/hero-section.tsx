@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TextField } from "@mui/material";
 import heroimg from "@/public/lady.webp";
+import { MdPermPhoneMsg } from "react-icons/md";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -115,9 +116,10 @@ export default function HeroSection() {
         bg-[#c4e962]
         shadow-[0_0_25px_rgba(196,233,98,0.5)]
         whitespace-nowrap
+        text-2xl
       "
                 >
-                  Get Started
+                 <MdPermPhoneMsg />
                 </motion.button>
               </div>
             </motion.div>

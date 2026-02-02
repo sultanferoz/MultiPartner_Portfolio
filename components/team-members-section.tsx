@@ -55,7 +55,7 @@ const TEAM_MEMBERS = [
 
 export default function TeamMembersSection() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-[var(--urit-light-gray)]">
+    <section className="py-16 mb-[80px] sm:py-20 md:py-24 px-4 sm:px-6 bg-[var(--urit-light-gray)]">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <motion.div

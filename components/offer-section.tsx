@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TextField } from "@mui/material";
+import { MdPermPhoneMsg } from "react-icons/md";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,14 +28,14 @@ export default function OfferSection() {
   };
 
   return (
-    <section className="pt-[80px] px-6 bg-card -mb-8 " id="contact">
+    <section className=" px-2 lg:px-6 bg-card -mb-8 " id="contact">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl bg-muted px-8 md:px-16"
+          className="relative rounded-3xl bg-muted px-2 lg:px-4"
         >
           <div className="relative bgGridLines z-10 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
             <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
@@ -117,10 +118,10 @@ export default function OfferSection() {
                       bg-[#c4e962]
                       shadow-[0_0_25px_rgba(196,233,98,0.5)]
                       whitespace-nowrap
-                      text-base
+                      text-2xl
                     "
                   >
-                    Get Started
+                    <MdPermPhoneMsg />
                   </motion.button>
                 </div>
               </div>

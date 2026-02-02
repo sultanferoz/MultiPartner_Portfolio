@@ -66,22 +66,18 @@ export default function ExpertiseSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className=" p-8 h-96  flex items-center justify-center">
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-6 ">
+            <div className=" p-8   flex items-center justify-center ">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-6  ">
                 {[
                   { name: "Python / Pandas", icon: <SiPython /> },
                   { name: "PySpark", icon: <SiApachespark /> },
                   { name: "SQL", icon: <SiPostgresql /> },
-                  // { name: "Power BI", icon: <SiPowerbi /> },
                   { name: "Data Pipelines", icon: <FaProjectDiagram /> },
                   { name: "ETL Automation", icon: <FaCogs /> },
                   { name: "Feature Eng.", icon: <FaDatabase /> },
                   { name: "ML Models", icon: <FaRobot /> },
                   { name: "Forecasting", icon: <FaProjectDiagram /> },
                   { name: "NLP", icon: <FaRobot /> },
-                  { name: "GenAI", icon: <SiOpenai /> },
-                  // { name: "Azure", icon: <SiMicrosoftazuredevops /> },
-
                   { name: "Databricks", icon: <SiDatabricks /> },
                   { name: "GitHub", icon: <SiGithub /> },
                   { name: "Jupyter", icon: <SiJupyter /> },
@@ -90,7 +86,7 @@ export default function ExpertiseSection() {
                   <motion.div
                     key={i}
                     whileHover={{ scale: 1.15, y: -5 }}
-                    className="flex flex-col items-center  gap-2"
+                    className="flex flex-col items-center  gap-2 "
                   >
                     <div className="w-14 h-14 rounded-full bg-muted hover:text-primary flex items-center justify-center shadow-xl text-secondary text-2xl">
                       {item.icon}
