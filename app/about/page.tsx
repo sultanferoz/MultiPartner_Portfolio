@@ -1,9 +1,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import "../globals.css"
-import TestimonialsSection from "@/components/testimonials-section";
-import PortfolioPage from "@/components/portfolio-section";
-import PortfolioData from "@/components/porfolio-data";
 import ScaleSection from "@/components/who-section";
 import EducationAndCerts from "@/components/education-sectioin";
 
@@ -13,7 +10,7 @@ export default function About() {
       <Navbar />
       <div className="h-[81px]"></div>
       <ScaleSection/>
-      <PortfolioData/>
+      {/* <PortfolioData/> */}
       <EducationAndCerts/>
       <Footer />
     </main>

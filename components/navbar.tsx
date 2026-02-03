@@ -74,7 +74,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={openModal}
-            className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-[#c4e962] hover:bg-[#94cf7f] border-0 whitespace-nowrap hidden md:flex"
+            className="glass-button water-effect px-8 py-3 rounded-full font-bold text-white bg-[#369be8] hover:bg-[#245094] border-0 whitespace-nowrap hidden md:flex"
           >
             Contact
           </motion.button>
@@ -133,7 +133,7 @@ export default function Navbar() {
                   setOpen(false);
                   openModal();
                 }}
-                className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-[#c4e962] border-0 whitespace-nowrap"
+                className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-[#369be8] border-0 whitespace-nowrap"
               >
                 Contact
               </motion.button>

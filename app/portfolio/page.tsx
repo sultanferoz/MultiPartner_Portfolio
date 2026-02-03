@@ -12,8 +12,6 @@ export default function TeamPage() {
     <main className="w-full overflow-hidden min-h-screen">
       <Navbar />
       <PortfolioPage/>
-      <TestimonialsSection/>
-      <EducationAndCerts/>
       <PortfolioData/>
       <OfferSection/>
       <Footer />

@@ -7,11 +7,11 @@ const _Inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "MultiPartner_Portfolio",
+  title: "DCode Analytics",
   description:
-    "The web sites is build for multi partners companies to share there contributtion tto world!",
+    "DCode Analyticsv is  multi partners Data Scientists and AI Automation Developers  share there contributtion to world!",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes",
-    generator: 'SF_laskir'
+    generator: 'Nextjs'
 }
 
 export default function RootLayout({

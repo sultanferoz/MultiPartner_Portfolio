@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="bgGridLines relative pt-32 lg:pt-16 pb-4 px-6 bg-[#239ba4]  flex items-start">
+    <section className="bgGridLines relative pt-32 lg:pt-16 pb-4 px-6 bg-muted  flex items-start">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className=" text-[42px]  lg:text-6xl font-medium text-white md:leading-tight  !capitalize">
                 DCode Analytics
-                <span className="block text-[#c4e962]  text-sm  lg:text-base leading-wide">
+                <span className="block text-primary  text-sm  lg:text-base leading-wide">
                   Data Scientists | AI Automation Developers
                 </span>
               </h1>
@@ -113,7 +113,7 @@ export default function HeroSection() {
         rounded-full
         font-semibold
         text-[#1a2332]
-        bg-[#c4e962]
+        bg-primary
         shadow-[0_0_25px_rgba(196,233,98,0.5)]
         whitespace-nowrap
         text-2xl
@@ -132,10 +132,10 @@ export default function HeroSection() {
               viewport={{ once: true }}
               className="flex items-center gap-2 text-white"
             >
-              <div className="w-5 h-5 rounded-full bg-[#c4e962] flex items-center justify-center text-[#1a2332]">
+              <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-[#1a2332]">
                 ✓
               </div>
-              <span className="text-sm text-[#c4e962]">
+              <span className="text-sm text-primary">
                 Come on in and explore my portfolio.
               </span>
             </motion.div>
@@ -170,7 +170,7 @@ export default function HeroSection() {
               <p className="text-xs text-card mb-1">Monthly Report</p>
               <div className="flex items-end gap-1 h-16">
                 {[...Array(12)].map((_, i) => (
-                  <div key={i} className="w-1 h-8 bg-[#c4e962] rounded" />
+                  <div key={i} className="w-1 h-8 bg-primary rounded" />
                 ))}
               </div>
             </motion.div>
@@ -202,7 +202,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="absolute z-10 xl:bottom-61 xl:-right-8 lg:bottom-21 lg:right-2 md:-bottom-4 md:right-0 bottom-0 right-0 bg-[#c4e962] rounded-2xl p-6 shadow-xl flex flex-col items-center justify-center"
+              className="absolute z-10 xl:bottom-61 xl:-right-8 lg:bottom-21 lg:right-2 md:-bottom-4 md:right-0 bottom-0 right-0 bg-primary rounded-2xl p-6 shadow-xl flex flex-col items-center justify-center"
             >
               <div className="w-10 h-10 rounded-full bg-[#1a2332] items-center justify-center flex text-xl text-center">
                 💁🏻
