@@ -11,7 +11,6 @@ export default function Footer() {
     <footer className="relative bg-secondary text-white pt-16 pb-2 px-6 z-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          // whileHover={{ scale: 1.05 }}
           className="flex items-center justify-start  gap-2 cursor-pointer"
         >
           <Link href="/">
@@ -24,7 +23,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-8 flex gap-14 justify-between"
+          className="mt-8 flex flex-wrap gap-3 lg:gap-14 justify-between  "
         >
           
           <h2 className="text-sm font-bold text-primary ">

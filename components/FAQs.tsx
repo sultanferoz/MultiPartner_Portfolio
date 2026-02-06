@@ -48,7 +48,7 @@ export default function FAQs() {
             viewport={{ once: true }}
           >
 
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-[42px] lg:text-5xl font-bold text-white mb-6">
               Frequently asked
               <br />
               <span className="text-[#c4e962]">questions</span>
@@ -79,16 +79,16 @@ export default function FAQs() {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="w-full flex items-center justify-between p-5 text-left"
+                    className="w-full flex items-center justify-between gap-2 p-5 text-left"
                   >
-                    <span className="font-semibold text-[#1a2332] text-sm md:text-base">
+                    <span className="font-semibold text-[#1a2332] text-sm lg:text-base">
                       {faq.question}
                     </span>
 
                     <motion.span
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
-                      className="flex items-center justify-center w-8 h-8 rounded-full bg-muted text-white"
+                      className="flex items-center justify-center p-2 rounded-[50px] bg-muted text-white"
                     >
                       <ChevronUp size={16} />
                     </motion.span>

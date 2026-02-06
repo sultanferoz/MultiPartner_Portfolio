@@ -140,14 +140,13 @@ import {
 import { FaProjectDiagram, FaRobot, FaDatabase, FaCogs } from "react-icons/fa";
 
 export default function ExpertiseSection() {
-  // Left-side achievements
+
   const Checkmarks = [
     "Transport Policy Shift: Influenced TfL's launch of Off-Peak Fridays through my “Friday Effect” analysis, helping reshape commuter patterns and drive post-pandemic recovery in Central London.",
     "AI Integration at Scale: Deployed GPT-4 automation to streamline data workflows, eliminating 96% of manual review time and setting the groundwork for AI-driven operations in planning.",
     "Civic Data Engagement: Delivered the technical backbone for a mayoral exhibition on planning services, translating complex datasets into accessible visuals viewed by over 1k+ Londoners (est.).",
   ];
 
-  // Right-side cards split into 3 columns
   const columns = [
     [
       {
@@ -241,7 +240,7 @@ export default function ExpertiseSection() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
           <div>
-            <h2 className="text-[32px] lg:text-[48px] font-bold text-[#1a2332] mb-8">
+            <h2 className="text-[42px] lg:text-[48px] font-bold text-[#1a2332] mb-8">
               <span className="text-[#4a9ba5]">Achievements &</span>
               <br />
               Dedicated Expertise
@@ -253,7 +252,7 @@ export default function ExpertiseSection() {
                   <div className="w-6 h-6 rounded-full bg-[#c4e962] text-[#1a2332] flex items-center justify-center mt-1 flex-shrink-0">
                     ✓
                   </div>
-                  <p className="text-gray-700">{item}</p>
+                  <p className="text-gray-70 text-[12px] lg:text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -279,7 +278,7 @@ export default function ExpertiseSection() {
                       return (
                         <div
                           key={i}
-                          className={`${bgClass} rounded-lg shadow-md px-4 py-6 flex flex-col items-center text-center w-65`}
+                          className={`${bgClass} rounded-lg shadow-md px-4 py-6 flex flex-col items-center text-center w-45 md:w-40 lg:w-65`}
                         >
                           <div className="text-3xl mb-4 text-primary">
                             {item.icon}

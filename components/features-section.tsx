@@ -123,7 +123,7 @@ export default function FeaturesSection() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md: griid-cols-3 lg:grid-cols-4 gap-6">
           {visibleFeatures.map((feature, index) => {
             const isLong = feature.description.length > 70
             const isExpanded = expandedIndex === index
@@ -150,7 +150,7 @@ export default function FeaturesSection() {
                     {feature.title}
                   </a>
 
-                  <p className="text-sm leading-relaxed ">
+                  <p className="text-xs md:text-sm leading-relaxed ">
                     {isLong && !isExpanded
                       ? feature.description.slice(0, 50) + "..."
                       : feature.description}
