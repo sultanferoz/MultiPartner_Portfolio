@@ -137,7 +137,7 @@ export default function EducationAndCerts() {
                 </div>
                 <p className="text-gray-600 italic mb-4">“{cert.review}”</p>
                 <div className="flex gap-4">
-                  <Link href={cert.certs} target="_blank" className="px-4 py-2 bg-purple-500 text-white rounded-full hover:bg-purple-600 transition">
+                  <Link href={cert.certs} target="_blank" className="px-4 py-2 bg-secondary text-white rounded-full hover:bg-muted transition">
                     View Certificate
                   </Link>
                 </div>
@@ -154,8 +154,6 @@ export default function EducationAndCerts() {
             </motion.div>
           ))}
         </div>
-
-        {/* Load More / Load Less Button */}
         {SHECODES_CERTS.length > 2 && (
           <div className="flex justify-center mt-8">
             <button

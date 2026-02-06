@@ -19,20 +19,6 @@ export default function Footer() {
           </Link>
         </motion.div>
 
-        {/* <motion.div>
-          <div className="flex items-center justify-center gap-12 mt-6">
-            {[Twitter, Mail, Linkedin].map((Icon, i) => (
-              <motion.a
-                key={i}
-                href="#"
-                whileHover={{ scale: 1.2, color: "#c4e962" }}
-                className="text-white/60 hover:text-[#c4e962] transition-colors"
-              >
-                <Icon size={20} />
-              </motion.a>
-            ))}
-          </div>
-        </motion.div> */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,28 +28,28 @@ export default function Footer() {
         >
           
           <h2 className="text-sm font-bold text-primary ">
-            Mobile:
+              Phone
             <br />
             <span className="text-xs hover:underline underline-offset-3 text-white/60"> 07831997881</span>
           </h2>
           <h2 className="text-sm font-bold text-primary ">
-            UK:
+            UK
             <br />
             <span className="text-xs hover:underline underline-offset-3 text-white/60">  +447831997881</span>
           </h2>
           <h2 className="text-sm font-bold text-primary ">
-            Canada/US:
+            Canada/US
             <br />
             <span className="text-xs hover:underline underline-offset-3 text-white/60"> +16472343153</span>
           </h2>
           <br />
           <h2 className="text-sm font-bold text-primary ">
-            NG:
+            NG
             <br />
             <span className="text-xs hover:underline underline-offset-3 text-white/60"> +2349024892746</span>
           </h2>
           <h2 className="text-sm font-bold text-primary ">
-            Email:
+            Email
             <br />
             <span className="text-xs hover:underline underline-offset-3 text-white/60"> damilola.emiola@xxx.com </span>
           </h2>
@@ -84,14 +70,14 @@ export default function Footer() {
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 py-6" />
+        <div className="border-b border-white/10 py-2" />
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-center  items-center text-sm text-white/60 gap-4"
+          className="flex py-2 flex-col md:flex-row justify-center  items-center text-sm text-white/60 gap-4"
         >
           <p>© 2026 All rights reserved</p>
           
