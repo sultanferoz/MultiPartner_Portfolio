@@ -9,48 +9,6 @@ const TEAM_MEMBERS = [
     bio: "Data professional with 9+ years in Python scripting, SQL, and Data Modelling. Expert in GPT-4 automation and public sector digital services.",
     initial: "ME",
   },
-  // {
-  //   name: "Dr. Chen Liu",
-  //   role: "Senior Machine Learning Engineer",
-  //   bio: "PhD in Computer Vision specializing in CNN architectures for pattern recognition and real-time detection systems.",
-  //   initial: "CL",
-  // },
-  // {
-  //   name: "Sarah Rodriguez",
-  //   role: "Data Engineering Manager",
-  //   bio: "Azure and Databricks expert with focus on ETL automation, cloud migration, and scalable data infrastructure.",
-  //   initial: "SR",
-  // },
-  // {
-  //   name: "James K. Patel",
-  //   role: "Principal Analytics Consultant",
-  //   bio: "Strategic analytics leader bridging data science with business strategy. Power BI and forecasting specialist.",
-  //   initial: "JP",
-  // },
-  // {
-  //   name: "Dr. Elena Volkova",
-  //   role: "NLP Research Lead",
-  //   bio: "Computational Linguistics PhD with expertise in multilingual NLP models and generative AI fine-tuning.",
-  //   initial: "EV",
-  // },
-  // {
-  //   name: "Marcus Johnson",
-  //   role: "DevOps & MLOps Engineer",
-  //   bio: "CI/CD pipeline specialist for machine learning deployments. Docker, Kubernetes, and Azure DevOps expert.",
-  //   initial: "MJ",
-  // },
-  // {
-  //   name: "Aisha Mohammed",
-  //   role: "Data Visualization Director",
-  //   bio: "Creates compelling data stories through interactive dashboards. Focus on accessibility and executive insights.",
-  //   initial: "AM",
-  // },
-  // {
-  //   name: "Thomas Wright",
-  //   role: "Data Governance Lead",
-  //   bio: "Ensures data quality, security, and compliance across enterprise data ecosystems and cloud platforms.",
-  //   initial: "TW",
-  // },
 ];
 
 export default function TeamMembersSection() {

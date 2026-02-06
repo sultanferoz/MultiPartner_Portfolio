@@ -220,15 +220,6 @@ export default function PortfolioData() {
                   )}
                   </p>
 
-                  {/* {isLong && (
-                    <button
-                      onClick={() => toggleReadMore(index)}
-                      className="mt-0 text-sm font-semibold"
-                    >
-                      {isExpanded ? "..." : "..."}
-                    </button>
-                  )} */}
-
                   <Link
                   href={feature.url}
                   target="_blank"

@@ -9,7 +9,6 @@ import { useState } from "react";
 export default function OfferSection() {
   const [email, setEmail] = useState("");
 
-  // Handle button click
   const handleSubmit = () => {
     if (!email) return alert("Please enter your email");
 
@@ -18,7 +17,6 @@ export default function OfferSection() {
       return alert("Please enter a valid email");
     }
 
-    // Open user's email client
     const subject = "New Contact Request";
     const body = `Hello,\n\nMy email is: ${email}\n\nI would like to get in touch.`;
 

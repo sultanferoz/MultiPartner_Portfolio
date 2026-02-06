@@ -97,22 +97,23 @@
     @apply bg-white text-slate-900;
 
   }
-  
+
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .bgGridLines {
   position: relative;
   background-color: #239ba4;
   overflow: visible;
+  border-radius: 50px 50px 0 0;
 }
 
 .bgGridLines::before {
@@ -126,19 +127,15 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
   background-size: 40px 40px;
 
-  -webkit-mask-image: radial-gradient(
-    circle at bottom right,
-    #000 0%,
-    #000 45%,
-    transparent 75%
-  );
+  -webkit-mask-image: radial-gradient(circle at bottom right,
+      #000 0%,
+      #000 45%,
+      transparent 75%);
 
-  mask-image: radial-gradient(
-    circle at bottom right,
-    #000 0%,
-    #000 45%,
-    transparent 75%
-  );
+  mask-image: radial-gradient(circle at bottom right,
+      #000 0%,
+      #000 45%,
+      transparent 75%);
 }
 
 
@@ -186,72 +183,101 @@
   }
 }
 
+
+
+
+
+
 .team-circular-slider {
 
 
   /* Center arc geometry */
   .team-arc-mask {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
   }
-  
-  
+
+
   /* Fade edges for pixel-perfect look */
   .team-arc-mask::before,
   .team-arc-mask::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  z-index: 20;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 20;
+    pointer-events: none;
   }
-  
-  
+
+
   .team-arc-mask::before {
-  left: 0;
-  background: linear-gradient(to right, #239ba4 10%, transparent 100%);
+    left: 0;
+    background: linear-gradient(to right, #239ba4 10%, transparent 100%);
   }
-  
-  
+
+
   .team-arc-mask::after {
-  right: 0;
-  background: linear-gradient(to left, #239ba4 10%, transparent 100%);
+    right: 0;
+    background: linear-gradient(to left, #239ba4 10%, transparent 100%);
   }
-  
-  
+
+  .animate-verticalScroll-up {
+    animation: scroll-up 15s linear infinite;
+  }
+
+  .animate-verticalScroll-down {
+    animation: scroll-down 15s linear infinite;
+  }
+
   /* Avatar card look like reference */
   .team-avatar {
-  border-radius: 1.25rem;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
-  
-.swipeContainer{
-  background-color: #000 !important;
-}
-.swiper{
-  background-color: #000 !important;
-}
-.swiper-wrapper{
-  background-color: green;
-}
-  
-  /* Responsive geometry tuning */
+
+  .swipeContainer {
+    background-color: #000 !important;
+  }
+
+  .swiper {
+    background-color: #000 !important;
+  }
+
+  .swiper-wrapper {
+    background-color: green;
+  }
   @media (max-width: 640px) {
-  .team-circular-slider {
-  animation-duration: 40s;
+    .team-circular-slider {
+      animation-duration: 40s;
+    }
   }
-  }
-  
-  
+
+
   @media (min-width: 1024px) {
-  .team-circular-slider {
-  animation-duration: 25s;
+    .team-circular-slider {
+      animation-duration: 25s;
+    }
   }
-  }
+
+
 }
+
+   @keyframes scroll-up {
+          0% { transform: translateY(0%); }
+          100% { transform: translateY(-50%); }
+        }
+        @keyframes scroll-down {
+          0% { transform: translateY(-50%); }
+          100% { transform: translateY(0%); }
+        }
+        .animate-verticalScroll-up {
+          animation: scroll-up 40s linear infinite;
+        }
+        .animate-verticalScroll-down {
+          animation: scroll-down 40s linear infinite;
+        }

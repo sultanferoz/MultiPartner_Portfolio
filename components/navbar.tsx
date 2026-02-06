@@ -142,7 +142,6 @@ export default function Navbar() {
         )}
       </motion.header>
 
-      {/* Modal Overlay */}
       <AnimatePresence>
         {showModal && (
           <>

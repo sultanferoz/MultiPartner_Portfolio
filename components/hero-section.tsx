@@ -10,7 +10,6 @@ import { useState } from "react";
 export default function HeroSection() {
   const [email, setEmail] = useState("");
 
-  // Handle button click
   const handleSubmit = () => {
     if (!email) return alert("Please enter your email");
 
@@ -59,7 +58,6 @@ export default function HeroSection() {
               </p>
             </div>
 
-            {/* Email Input & CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +66,7 @@ export default function HeroSection() {
               className="max-w-md w-full"
             >
               <div className="flex items-center w-full rounded-full p-1 bg-gradient-to-r from-[#1e9fa8]/70 to-[#1a7f8f]/70 backdrop-blur-md border border-white/20 shadow-lg">
-                {/* Email Input */}
+      
                 <TextField
                   placeholder="Enter Your Email"
                   variant="outlined"
@@ -102,7 +100,7 @@ export default function HeroSection() {
                   }}
                 />
 
-                {/* Button */}
+
                 <motion.button
                   onClick={handleSubmit}
                   whileHover={{ scale: 1.05 }}
@@ -124,7 +122,6 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Free Consultation */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -141,7 +138,6 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Image & Cards */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -158,7 +154,7 @@ export default function HeroSection() {
               />
             </motion.div>
 
-            {/* Monthly Report Card */}
+       
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

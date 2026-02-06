@@ -40,16 +40,13 @@ export default function FAQs() {
     <section className="py-20 px-6 bg-muted mb-[80px]" id="faq">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm mb-4">
-              faqs_section
-            </span>
 
             <h2 className="text-5xl font-bold text-white mb-6">
               Frequently asked
@@ -63,14 +60,15 @@ export default function FAQs() {
             </p>
           </motion.div>
 
-          {/* Right FAQ Panel (Scroll Container) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative  max-h-[320px] md:max-h-[400px] overflow-y-auto scrollbar-hide space-y-4"
+            className="relative   space-y-4 overflow-hidden  "
           >
+            {/* <div className="pointer-events-none absolute rounded-2xl  top-1 left-0 w-full h-12 bg-gradient-to-b from-white/80 to-transparent blur-lg z-10" /> */}
+
             {faqs_section.map((faq, index) => {
               const isOpen = openIndex === index;
 
@@ -112,6 +110,7 @@ export default function FAQs() {
                 </motion.div>
               );
             })}
+            {/* <div className="pointer-events-none rounded-2xl  absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white/30 to-transparent blur-2xl z-10" /> */}
            
           </motion.div>
         </div>

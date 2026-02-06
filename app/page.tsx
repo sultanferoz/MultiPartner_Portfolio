@@ -18,8 +18,8 @@ export default function Home() {
       <FeaturesSection />
       <ExpertiseSection />
       {/* <PortfolioPage/> */}
-      <FAQs/>
       <TestimonialsSection/>
+      <FAQs/>
       <OfferSection />
       <Footer />
     </main>

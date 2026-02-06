@@ -44,10 +44,8 @@ export default function TeamHeroSection() {
             priority
           />
 
-          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-          {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
             <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-1">
               Damilola Emiola
@@ -57,12 +55,10 @@ export default function TeamHeroSection() {
             </p>
           </div>
 
-          {/* Ring Effect */}
           <div className="absolute inset-0 rounded-[36px] ring-1 ring-primary/40" />
         </motion.div>
       </div>
 
-      {/* Bottom Glow */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-[180px] rounded-[999px] blur-3xl opacity-40"
         style={{

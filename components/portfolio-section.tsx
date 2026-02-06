@@ -134,7 +134,6 @@ export default function PortfolioPage() {
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
           >
-            {/* Image */}
             <Image
               src={item.src}
               alt={item.title}
@@ -144,7 +143,6 @@ export default function PortfolioPage() {
               priority={index < 4}
             />
 
-            {/* Hover Overlay */}
             <div
               className={`absolute inset-0 flex items-center justify-center bg-black/70 transition-opacity duration-300 px-6 text-center ${
                 hovered === index ? "opacity-100" : "opacity-0"

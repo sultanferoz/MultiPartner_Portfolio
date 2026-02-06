@@ -107,13 +107,11 @@ export default function TestimonialsSection() {
                   className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-100"
                 >
                   <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                    {/* Left: Image with decorative border */}
+                    
                     <div className="relative">
-                      {/* Decorative border elements */}
                       <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#4a9ba5] rounded-tl-lg"></div>
                       <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#4a9ba5] rounded-br-lg"></div>
-                      
-                      {/* Image container */}
+                    
                       <div className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
                         <Image
                         width={100}
@@ -126,24 +124,18 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
 
-                    {/* Right: Text content */}
                     <div className="flex-1">
-                      {/* Quote icon */}
                       <div className="mb-6">
                         <svg className="w-12 h-12 text-[#4a9ba5]" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                         </svg>
                       </div>
-
-                      {/* Testimonial text */}
                       <p className="text-[14px] md:text-lg lg:text-xl text-gray-800 leading-relaxed mb-2 md:mb-8 italic">
                         {testimonial.text}
                       </p>
 
-                      {/* Divider */}
                       <div className="w-16 h-0.5 bg-[#4a9ba5] mb-6"></div>
 
-                      {/* Name and role */}
                       <div>
                         <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#1a2332] mb-2">
                           {testimonial.name}
@@ -162,7 +154,6 @@ export default function TestimonialsSection() {
           {/* Custom Pagination Dots */}
           <div className="custom-pagination flex justify-center items-center gap-3 mt-8"></div>
 
-          {/* Custom Navigation Buttons */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -175,7 +166,6 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      {/* Custom CSS for Swiper */}
       <style jsx global>{`
         .custom-pagination {
           display: flex;
