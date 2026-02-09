@@ -75,7 +75,7 @@ export default function OfferSection() {
                 viewport={{ once: true }}
                 className="hidden md:flex text-card text-base max-w-sm text-center lg:text-left"
               >
-               Do you have a project I can help you with? Let's talk about it.
+               Do you have a project We can help you with? Let's talk about it.
               </motion.p>
 
               {/* INPUT GROUP */}

@@ -134,6 +134,16 @@
   
 }
 
+.herosection {
+  background-image: url("/datascience.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+
 .scrollbar-hide {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
@@ -145,7 +155,7 @@
 
 .bgGridLines {
   position: relative;
-  background-color: #239ba4;
+  /* background-color: ; */
   overflow: visible;
 }
 

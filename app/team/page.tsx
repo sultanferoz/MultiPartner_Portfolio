@@ -11,7 +11,6 @@ export default function TeamPage() {
   return (
     <main className="w-full overflow-hidden min-h-screen">
       <Navbar />
-      <TeamHeroSection />
       <TeamMembersSection />
       <FAQs/>
       <OfferSection/>

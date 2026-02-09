@@ -5,67 +5,71 @@ import Image from "next/image";
 
 export default function TeamHeroSection() {
   return (
-    <section className="bgGridLines min-h-screen h-screen relative flex flex-col px-4 bg-muted overflow-hidden">
-      {/* Header */}
+    <section className="relative max-w-7xl mx-auto w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-10 overflow-hidden">
+      
+      {/* Subtle background decoration */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full" />
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full" />
+
+      {/* Text Content */}
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={{ opacity: 0, y: 32 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="pt-28 lg:pt-32 text-center mb-10 flex-shrink-0"
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative z-10 lg:w-[40%] text-left mb-14 lg:mb-0"
       >
-        <h1 className="text-[32px] sm:text-[38px] md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+        <h1 className="text-[34px] sm:text-[42px] lg:text-[52px] font-semibold tracking-tight text-primary leading-[1.1]">
           Meet Our Team
         </h1>
-        <p className="text-white/85 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mt-3">
-          A diverse team of passionate professionals driving innovation and
-          excellence in every project.
+
+        <p className="mt-4 max-w-md text-black/70 text-base lg:text-lg leading-relaxed">
+          A carefully selected group of engineers, designers, and data experts
+          dedicated to building intelligent, impactful solutions.
         </p>
       </motion.div>
 
-      {/* Center Tile */}
-      <div className="flex-1 flex items-center justify-center">
+      {/* Image Card */}
+      <div className="relative z-10 flex-1 flex items-center justify-center">
         <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
+          initial={{ scale: 0.92, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative rounded-[36px] overflow-hidden shadow-2xl group"
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          whileHover={{ y: -6 }}
+          className="group relative rounded-[40px] overflow-hidden"
           style={{
-            width: "clamp(280px, 70vw, 420px)",
-            height: "clamp(380px, 60vh, 520px)",
+            width: "clamp(360px, 60vw, 440px)",
+            height: "clamp(480px, 65vh, 560px)",
           }}
         >
-          {/* Placeholder Image */}
+          {/* Image */}
           <Image
-            src="/damei.webp"
-            alt="Team Placeholder"
+            src="/lady.webp"
+            alt="Team Member"
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 420px"
             priority
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
+          {/* Glass Border */}
+          <div className="absolute inset-0 rounded-[40px] ring-1 ring-white/20" />
+
+          {/* Soft shadow */}
+          <div className="absolute inset-0 rounded-[40px] shadow-[0_30px_80px_rgba(0,0,0,0.25)]" />
+
+          {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-1">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white tracking-tight">
               Damilola Emiola
             </h3>
-            <p className="text-sm md:text-base lg:text-lg text-white/90">
+            <p className="mt-1 text-sm md:text-base text-white/80">
               Lead Data Scientist & AI Specialist
             </p>
           </div>
-
-          <div className="absolute inset-0 rounded-[36px] ring-1 ring-primary/40" />
         </motion.div>
       </div>
-
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[180px] rounded-[999px] blur-3xl opacity-40"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 0%, rgba(196,233,98,0.4) 0%, rgba(35,155,164,0.3) 40%, transparent 72%)",
-        }}
-      />
     </section>
   );
 }

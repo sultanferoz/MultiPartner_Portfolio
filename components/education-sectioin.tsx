@@ -23,7 +23,7 @@ const EDUCATION = [
 const SHECODES_CERTS = [
   {
     title: "SheCodes Plus AI",
-    review: "Looking forward to using my new AI bot building skills in my current role.",
+    review: "Looking forward to using our new AI bot building skills in our current role.",
     image: "/certs1.png", 
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
@@ -35,7 +35,7 @@ const SHECODES_CERTS = [
   },
   {
     title: "SheCodes Python Basics",
-    review: "Fantastic course! Great new knowledge to add to my python repertoire 😊",
+    review: "Fantastic course! Great new knowledge to add to our python repertoire 😊",
     image: "/certs3.png",
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
@@ -74,7 +74,7 @@ export default function EducationAndCerts() {
             <span className="text-muted">My</span> Education
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            Academic foundations that power my data science, AI, and automation work.
+            Academic foundations that power our data science, AI, and automation work.
           </p>
         </motion.div>
 

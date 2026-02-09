@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/public/favicon.webp";
 import Image from "next/image";
 import OfferSection from "@/components/offer-section";
+import ContactForm from "./contactForm";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed bg-muted z-50 w-full backdrop-blur-md shadow-lg"
+        className="fixed  w-full z-50 bg-white/20 backdrop-blur-3xl border-b border-white/20 shadow-xl"
       >
         <nav className="max-w-7xl mx-auto py-3 px-[20px] flex items-center justify-between">
           {/* Logo */}
@@ -61,12 +62,6 @@ export default function Navbar() {
             >
               Portfolio
             </Link>
-            <Link
-              href="/about"
-              className="text-secondary font-medium hover:text-primary hover:underline hover:underline-offset-4 transition-colors text-lg leading-wider font-sans medium"
-            >
-              About
-            </Link>
           </div>
 
           {/* Desktop CTA */}
@@ -74,7 +69,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={openModal}
-            className="glass-button water-effect px-8 py-3 rounded-full font-bold text-white bg-[#369be8] hover:bg-[#245094] border-0 whitespace-nowrap hidden md:flex"
+            className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-[#369be8] hover:bg-[#245094] border-0 whitespace-nowrap hidden md:flex"
           >
             Contact
           </motion.button>
@@ -118,13 +113,6 @@ export default function Navbar() {
               >
                 Portfolio
               </Link>
-              <Link
-                onClick={() => setOpen(false)}
-                href="/about"
-                className="text-secondary font-bold hover:text-primary transition-colors text-lg font-sans medium"
-              >
-                About
-              </Link>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -133,7 +121,7 @@ export default function Navbar() {
                   setOpen(false);
                   openModal();
                 }}
-                className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-[#369be8] border-0 whitespace-nowrap"
+                className="glass-button water-effect px-8 py-3 rounded-full font-bold text-secondary bg-primary border-0 whitespace-nowrap"
               >
                 Contact
               </motion.button>
@@ -153,7 +141,6 @@ export default function Navbar() {
               className="fixed inset-0 z-[100] bg-white/50 backdrop-blur-lg"
             />
 
-            {/* Modal Container */}
             <div className="fixed inset-0 z-[101] flex items-center justify-center p-2">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -162,17 +149,14 @@ export default function Navbar() {
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
                 className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-secondary  rounded-3xl shadow-2xl border border-secondary"
               >
-                {/* Close Button */}
                 <button
                   onClick={closeModal}
                   className="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-secondary hover:text-primary transition-all"
                 >
                   <X className="w-5 h-5" />
                 </button>
-
-                {/* OfferSection Component */}
                 <div className="p-6 md:p-8">
-                  <OfferSection  />
+                  <ContactForm  />
                 </div>
               </motion.div>
             </div>

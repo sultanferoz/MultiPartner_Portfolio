@@ -55,7 +55,7 @@ export default function FAQs() {
             </h2>
 
             <p className="text-white/80 max-w-md">
-              Feel free to ask about my services, experience, technical skills,
+              Feel free to ask about our services, experience, technical skills,
               and availability for collaboration or relocation.
             </p>
           </motion.div>

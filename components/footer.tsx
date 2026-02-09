@@ -26,11 +26,7 @@ export default function Footer() {
           className="mt-8 flex flex-wrap gap-3 lg:gap-14 justify-between  "
         >
           
-          <h2 className="text-sm font-bold text-primary ">
-              Phone
-            <br />
-            <span className="text-xs hover:underline underline-offset-3 text-white/60"> 07831997881</span>
-          </h2>
+         
           <h2 className="text-sm font-bold text-primary ">
             UK
             <br />

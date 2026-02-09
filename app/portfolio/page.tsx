@@ -6,12 +6,14 @@ import PortfolioPage from "@/components/portfolio-section";
 import PortfolioData from "@/components/porfolio-data";
 import OfferSection from "@/components/offer-section";
 import EducationAndCerts from "@/components/education-sectioin";
+import Projects from "@/components/showchase-section";
 
 export default function TeamPage() {
   return (
     <main className="w-full overflow-hidden min-h-screen">
       <Navbar />
       <PortfolioPage/>
+      <Projects/>
       <PortfolioData/>
       <OfferSection/>
       <Footer />

@@ -99,6 +99,19 @@
   }
 
 }
+.herosection {
+  /* This creates a subtle 30% black overlay */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ), 
+    url("/newfinal.jpg");
+    
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -111,8 +124,8 @@
 
 .bgGridLines {
   position: relative;
-  background-color: #239ba4;
-  overflow: visible;
+  background-color:var(--muted);
+  overflow: hidden;
   border-radius: 50px 50px 0 0;
 }
 
@@ -123,20 +136,19 @@
   pointer-events: none;
 
   background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    linear-gradient(to left, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 40px 40px;
 
-  -webkit-mask-image: radial-gradient(circle at bottom right,
-      #000 0%,
-      #000 45%,
-      transparent 75%);
+  /* CHEAPER fade instead of mask-image */
+  background-repeat: repeat;
+  opacity: 0.6;
 
-  mask-image: radial-gradient(circle at bottom right,
-      #000 0%,
-      #000 45%,
-      transparent 75%);
+  /* GPU hint */
+  transform: translateZ(0);
+  will-change: opacity;
 }
+
 
 
 

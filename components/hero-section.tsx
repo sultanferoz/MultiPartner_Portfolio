@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TextField } from "@mui/material";
-import heroimg from "@/public/lady.webp";
+import heroimg from "@/public/now.png";
 import { MdPermPhoneMsg } from "react-icons/md";
 import Image from "next/image";
 import { useState } from "react";
@@ -22,13 +22,13 @@ export default function HeroSection() {
     const body = `Hello,\n\nMy email is: ${email}\n\nI would like to get in touch.`;
 
     window.location.href = `mailto:damilola.emiola@xxx.com?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
-    <section className="bgGridLines relative pt-32 lg:pt-16 pb-4 px-6 bg-muted  flex items-start">
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+    <section className="herosection bgGridLines  h-screen  relative pt-32 lg:pt-16 pb-4 px-6   flex items-start">
+      <div className="max-w-7xl mx-auto w-full self-center relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <motion.div
@@ -46,80 +46,23 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="text-xs lg:text-base text-white/80 max-w-2xl">
-                Data professional with a strong foundation in Python scripting
-                and Data Modelling, backed by 9 years of experience in data
-                analytics and public sector digital services. Skilled in SQL,
-                Python, Pyspark and APIs with hands-on project deployment via
-                GitHub and Netlify. Completed AI, Python, and web development
-                training through SheCodes, WorldQuant University and NVIDIA,
-                with a proven ability to build clean, scalable tools for
-                real-world users. Open to hybrid roles that intersect software,
-                automation, and data science.
+                We deliver data solutions that work smarter, faster, and drive real impact. By combining analytics, automation, and scalable tools, we help businesses turn raw data into actionable insights, empowering better decisions and tangible results.
               </p>
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="max-w-md w-full"
+              className="flex items-center gap-2 text-white"
             >
-              <div className="flex items-center w-full rounded-full p-1 bg-gradient-to-r from-[#1e9fa8]/70 to-[#1a7f8f]/70 backdrop-blur-md border border-white/20 shadow-lg">
-      
-                <TextField
-                  placeholder="Enter Your Email"
-                  variant="outlined"
-                  fullWidth
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      height: 52,
-                      borderRadius: "9999px",
-                      color: "white",
-                      background: "transparent",
-                      paddingLeft: "12px",
-                      "& fieldset": {
-                        border: "none",
-                      },
-                      "&:hover fieldset": {
-                        border: "none",
-                      },
-                      "&.Mui-focused fieldset": {
-                        border: "none",
-                      },
-                    },
-                    "& .MuiOutlinedInput-input": {
-                      padding: "14px 12px",
-                    },
-                    "& .MuiOutlinedInput-input::placeholder": {
-                      color: "rgba(255,255,255,0.65)",
-                      opacity: 1,
-                    },
-                  }}
-                />
-
-
-                <motion.button
-                  onClick={handleSubmit}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="
-        h-[52px]
-        px-8
-        rounded-full
-        font-semibold
-        text-[#1a2332]
-        bg-primary
-        shadow-[0_0_25px_rgba(196,233,98,0.5)]
-        whitespace-nowrap
-        text-2xl
-      "
-                >
-                 <MdPermPhoneMsg />
-                </motion.button>
+              <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-[#1a2332]">
+                ✓
               </div>
+              <span className="text-sm text-primary">
+                AI Software Development
+              </span>
             </motion.div>
 
             <motion.div
@@ -133,12 +76,26 @@ export default function HeroSection() {
                 ✓
               </div>
               <span className="text-sm text-primary">
-                Come on in and explore my portfolio.
+                AI Automation 
+              </span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-2 text-white"
+            >
+              <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-[#1a2332]">
+                ✓
+              </div>
+              <span className="text-sm text-primary">
+                Computer Vision
               </span>
             </motion.div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -148,13 +105,14 @@ export default function HeroSection() {
             <motion.div className="relative z-4 overflow-visible">
               <Image
                 src={heroimg}
-                alt="heroimage"
+                alt="Hero"
                 priority
-                className="relative md:-bottom-24 xl:-left-20 md:-left-8 bottom-2 -left-4"
+                sizes="100vw"
+                quality={75}
+                className="relative md:-bottom-12  md:left-0 bottom-2 -left-4"
               />
             </motion.div>
 
-       
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +129,6 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* New Clients Card */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +148,6 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Price Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -208,7 +164,7 @@ export default function HeroSection() {
                 Data Scientist, Data Analyst <br /> & Machine Learning
               </p>
             </motion.div>
-          </motion.div>
+          </motion.div>  */}
         </div>
       </div>
     </section>
