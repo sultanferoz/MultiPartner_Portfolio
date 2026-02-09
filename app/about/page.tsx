@@ -10,7 +10,6 @@ export default function About() {
       <Navbar />
       <div className="h-[81px]"></div>
       <ScaleSection/>
-      {/* <PortfolioData/> */}
       <EducationAndCerts/>
       <Footer />
     </main>

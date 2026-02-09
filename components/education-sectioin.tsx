@@ -22,6 +22,24 @@ const EDUCATION = [
 
 const SHECODES_CERTS = [
   {
+    title: "Microsoft Certified",
+    review: "Power BI Data Analyst Associate",
+    image: "/certs6.png", 
+    certs :"https://learn.microsoft.com/en-us/users/damieemiola/credentials/698aaeb90efa8254?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+  },
+  {
+    title: "WorldQuant University",
+    review: "Scientific Computing and Python for Data Science",
+    image: "/certs7.png", 
+    certs :"https://wqu.thedataincubator.com/certificate/6516213173714944"
+  },
+  {
+    title: "Nvidia",
+    review: "Demonstrating competence in the completion of Accelerating End-to-End Data Science Workflow",
+    image: "/certs8.png", 
+    certs :"https://learn.nvidia.com/certificates?id=HoDHqNJORLCSvgyDBwFFuA"
+  },
+  {
     title: "SheCodes Plus AI",
     review: "Looking forward to using our new AI bot building skills in our current role.",
     image: "/certs1.png", 
@@ -61,8 +79,6 @@ export default function EducationAndCerts() {
   return (
     <section className="py-24 px-6 bg-card">
       <div className="max-w-7xl mx-auto space-y-24">
-
-        {/* EDUCATION */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

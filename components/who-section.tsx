@@ -17,14 +17,12 @@ export default function WhoAmI() {
           className="text-center mb-16"
         >
           <h2 className="text-[32px] lg:text-[48px] font-bold text-secondary  mb-4">
-              <span className="text-muted">Who</span>
+              <span className="text-muted">Damilola </span>
               {" "}
-              m'I
+              Emiola
             </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
-            I'm a results-driven Data Scientist and Microsoft certified Power BI
-            Data Analyst with a passion for transforming complex data into
-            actionable insights.
+            Skilled at translating complex data into actionable insights for product, operational, and executive teams, with experience in Agile environments and a strong focus on data quality, governance, and stakeholder collaboration.
           </p>
         </motion.div>
 
