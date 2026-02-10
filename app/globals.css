@@ -99,8 +99,16 @@
   }
 
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+
 .herosection {
-  /* This creates a subtle 30% black overlay */
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.3), 
       rgba(0, 0, 0, 0.3)
