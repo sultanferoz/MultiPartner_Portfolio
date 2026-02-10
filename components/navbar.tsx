@@ -78,6 +78,7 @@ export default function Navbar() {
           <button
             className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-secondary font-bold"
             onClick={() => setOpen(!open)}
+            aria-label="Open navigation menu"
           >
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

@@ -90,6 +90,7 @@ export default function Footer() {
               <motion.a
                 key={i}
                 href={href}
+                aria-label="Send email to Damilola Emiola"
                 whileHover={{ y: -4, color: "#c4e962" }}
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white/60 hover:bg-white/10 transition-all border border-white/10"
               >

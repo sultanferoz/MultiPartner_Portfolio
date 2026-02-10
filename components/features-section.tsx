@@ -163,6 +163,7 @@ export default function FeaturesSection() {
                 <div className="mt-8 pt-6 border-t border-[#1a2332]/5">
                   <a
                     href={feature.url}
+                    aria-label="Explore Case Study"
                     className="inline-flex items-center text-xs uppercase tracking-widest font-bold text-[#1a2332] group/link"
                   >
                     Explore Case Study

@@ -24,49 +24,49 @@ const SHECODES_CERTS = [
   {
     title: "Microsoft Certified",
     review: "Power BI Data Analyst Associate",
-    image: "/certs6.png", 
+    image: "/certs6.webp", 
     certs :"https://learn.microsoft.com/en-us/users/damieemiola/credentials/698aaeb90efa8254?ref=https%3A%2F%2Fwww.linkedin.com%2F"
   },
   {
     title: "WorldQuant University",
     review: "Scientific Computing and Python for Data Science",
-    image: "/certs7.png", 
+    image: "/certs7.webp", 
     certs :"https://wqu.thedataincubator.com/certificate/6516213173714944"
   },
   {
     title: "Nvidia",
     review: "Demonstrating competence in the completion of Accelerating End-to-End Data Science Workflow",
-    image: "/certs8.png", 
+    image: "/certs8.webp", 
     certs :"https://learn.nvidia.com/certificates?id=HoDHqNJORLCSvgyDBwFFuA"
   },
   {
     title: "SheCodes Plus AI",
     review: "Looking forward to using our new AI bot building skills in our current role.",
-    image: "/certs1.png", 
+    image: "/certs1.webp", 
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
   {
     title: "SheCodes Python Advanced",
     review: "Enjoyed every minute of it!",
-    image: "/certs2.png",
+    image: "/certs2.webp",
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
   {
     title: "SheCodes Python Basics",
     review: "Fantastic course! Great new knowledge to add to our python repertoire 😊",
-    image: "/certs3.png",
+    image: "/certs3.webp",
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
   {
     title: "SheCodes Plus Add-on",
     review: "Great course, very easy to follow and instructive!",
-    image: "/certs4.png",
+    image: "/certs4.webp",
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
   {
     title: "SheCodes Plus",
     review: "Challenging but I'm glad I stuck with it. I look forward to building more apps with the knowledge I've gained!",
-    image: "/certs5.png",
+    image: "/certs5.webp",
     certs :"https://www.shecodes.io/graduates/136683-damilola-emiola"
   },
 ];
