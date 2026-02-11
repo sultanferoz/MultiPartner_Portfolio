@@ -70,7 +70,7 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#fafafa] pt-32 pb-20 px-6">
+    <main className="min-h-screen portfolio bg-[#fafafa] pt-32 pb-20 px-6">
       {/* Header Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <motion.div
@@ -82,9 +82,9 @@ export default function PortfolioPage() {
           
            <h2 className="text-[42px] lg:text-5xl font-bold  text-muted tracking-tight leading-[1.1] mb-4">
               Selected {" "}
-              <span className="text-secondary">Works</span>
+              <span className="text-card">Works</span>
             </h2>
-          <p className="text-lg text-slate-600 leading-relaxed border-l-2 border-primary pl-6">
+          <p className="text-lg text-card leading-relaxed border-l-2 border-primary pl-6">
             A fusion of data science and visual precision. Exploring the intersection of 
             predictive modelling, UI refinement, and actionable analytics.
           </p>

@@ -8,21 +8,21 @@ const FEATURES_PER_LOAD = 4;
 const features = [
   {
     icon: "📊",
-    title: "Power BI",
+    title: "Data Visualization",
     description:
       "The Customer Management Portal was built to make customer information more accessible to the business’s customer experience team.",
     url: "/portfolio",
   },
   {
     icon: "🧩",
-    title: "Power Apps",
+    title: "Bespoke Applications",
     description:
       "The project management office required a dynamic platform on which they could capture their weekly project status for reporting purposes.",
     url: "/portfolio",
   },
   {
     icon: "💼",
-    title: "Investment Management Dashboard",
+    title: "Web Apps",
     description:
       "This investment dashboard back-end plug-in enables customers to view returns on their investments over a 10-year period.",
     url: "/portfolio",
@@ -80,8 +80,8 @@ export default function FeaturesSection() {
         >
           <div className="flex flex-col md:flex-row justify-between gap-10">
             <h2 className=" text-[42px] lg:text-5xl font-bold text-muted leading-tight lg:leading-normal">
-              Relatable & Captivate
-              <span className="block text-secondary">Portfolio of Works</span>
+              Our
+              <span className="block text-secondary">Portfolio Of Works</span>
             </h2>
 
             <div className="max-w-md">

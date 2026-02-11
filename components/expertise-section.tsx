@@ -1,19 +1,23 @@
-
-
 "use client";
 
 import {
-  SiPython,
-  SiApachespark,
   SiDatabricks,
-  SiGithub,
-  SiJupyter,
-  SiPostgresql,
+  SiApacheairflow,
+  SiTensorflow,
+  SiTableau,
+  SiApachekafka,
+  SiSnowflake,
 } from "react-icons/si";
-import { FaProjectDiagram, FaRobot, FaDatabase, FaCogs } from "react-icons/fa";
+
+import {
+  FaDatabase,
+  FaProjectDiagram,
+  FaChartLine,
+  FaCogs,
+  FaRegCheckCircle,
+} from "react-icons/fa";
 
 export default function ExpertiseSection() {
-
   const Checkmarks = [
     "Transport Policy Shift: Influenced TfL's launch of Off-Peak Fridays through my “Friday Effect” analysis, helping reshape commuter patterns and drive post-pandemic recovery in Central London.",
     "AI Integration at Scale: Deployed GPT-4 automation to streamline data workflows, eliminating 96% of manual review time and setting the groundwork for AI-driven operations in planning.",
@@ -23,86 +27,87 @@ export default function ExpertiseSection() {
   const columns = [
     [
       {
-        title: "Databricks",
+        title: "Data Engineering",
         icon: <SiDatabricks />,
-        desc: "Astonished set expression solicitude way admiration",
+        desc: "Designing scalable and reliable data systems.",
       },
       {
-        title: "GitHub",
-        icon: <SiGithub />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Pipeline Architecture",
+        icon: <SiApacheairflow />,
+        desc: "Building automated and efficient data pipelines.",
       },
       {
-        title: "Jupyter",
-        icon: <SiJupyter />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "AI & Machine Learning Enablement",
+        icon: <SiTensorflow />,
+        desc: "Empowering intelligent solutions with ML models.",
       },
       {
-        title: "Data Modeling",
+        title: "Master Data Management",
         icon: <FaDatabase />,
-        desc: "Astonished set expression solicitude way admiration",
+        desc: "Ensuring centralized and consistent core data assets.",
       },
       {
-        title: "IT Consultancy",
-        icon: <SiPython />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Business Intelligence",
+        icon: <FaChartLine />,
+        desc: "Transforming data into actionable insights.",
       },
       {
-        title: "Cloud Computing",
-        icon: <SiApachespark />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Executive Reporting",
+        icon: <SiApacheairflow/>,
+        desc: "Delivering strategic dashboards for leadership.",
       },
       {
-        title: "Cyber Security",
-        icon: <SiPostgresql />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Data Quality",
+        icon: <FaRegCheckCircle />,
+        desc: "Maintaining data accuracy and reliability.",
       },
       {
-        title: "Backup & Recovery",
+        title: "End-to-End Digital Transformation Delivery",
         icon: <FaProjectDiagram />,
-        desc: "Astonished set expression solicitude way admiration",
+        desc: "Driving full-cycle digital innovation initiatives.",
       },
     ],
+
     [
       {
-        title: "ML Models",
-        icon: <FaRobot />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Real-Time Data Streaming",
+        icon: <SiApachekafka />,
+        desc: "Enabling real-time event-driven architectures.",
       },
       {
-        title: "Feature Eng.",
-        icon: <FaDatabase />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Cloud Data Warehousing",
+        icon: <SiSnowflake />,
+        desc: "Modern scalable cloud-based data platforms.",
       },
       {
-        title: "Forecasting",
-        icon: <FaProjectDiagram />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Advanced Analytics",
+        icon: <FaChartLine />,
+        desc: "Deep insights with predictive modeling.",
       },
       {
-        title: "NLP",
-        icon: <FaRobot />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Process Automation",
+        icon: <FaCogs />,
+        desc: "Optimizing workflows through automation.",
       },
       {
-        title: "Databricks",
+        title: "Data Visualization",
+        icon: <SiTableau />,
+        desc: "Interactive dashboards and visual storytelling.",
+      },
+      {
+        title: "Governance & Compliance",
+        icon: <FaRegCheckCircle />,
+        desc: "Ensuring secure and compliant data operations.",
+      },
+      {
+        title: "Scalable Infrastructure",
         icon: <SiDatabricks />,
-        desc: "Astonished set expression solicitude way admiration",
+        desc: "Robust infrastructure for growing businesses.",
       },
       {
-        title: "GitHub",
-        icon: <SiGithub />,
-        desc: "Astonished set expression solicitude way admiration",
-      },
-      {
-        title: "Jupyter",
-        icon: <SiJupyter />,
-        desc: "Astonished set expression solicitude way admiration",
-      },
-      {
-        title: "Data Modeling",
-        icon: <FaDatabase />,
-        desc: "Astonished set expression solicitude way admiration",
+        title: "Enterprise Strategy",
+        icon: <FaProjectDiagram />,
+        desc: "Aligning data initiatives with business goals.",
       },
     ],
   ];
@@ -143,9 +148,9 @@ export default function ExpertiseSection() {
                     {[...col, ...col].map((item, i) => {
                       let bgClass = "bg-white";
                       if (colIndex % 2 === 0) {
-                        if (i % 2 === 0) bgClass = "bg-muted";
+                        if (i % 2 === 0) bgClass = "bg-muted text-white";
                       } else {
-                        if (i % 2 !== 0) bgClass = "bg-muted";
+                        if (i % 2 !== 0) bgClass = "bg-muted text-white";
                       }
 
                       return (
@@ -153,13 +158,14 @@ export default function ExpertiseSection() {
                           key={i}
                           className={`${bgClass} rounded-lg shadow-md px-4 py-6 flex flex-col items-center text-center w-45 md:w-40 lg:w-65`}
                         >
-                          <div className="text-3xl mb-4 text-primary">
+                          <div className={`text-3xl mb-4 text-primary`}>
                             {item.icon}
                           </div>
-                          <h3 className="font-semibold text-lg mb-2">
+                          <h3
+                            className={`font-semibold text-sm mb-2 ${bgClass}`}
+                          >
                             {item.title}
                           </h3>
-                          <p className="text-xs text-secondary">{item.desc}</p>
                         </div>
                       );
                     })}

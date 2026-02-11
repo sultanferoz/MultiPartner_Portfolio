@@ -38,7 +38,7 @@ export default function TeamMembersSection() {
             </h2>
             <p className="mt-6 text-xs lg:text-base text-secondary max-w-2xl">
               Expert minds driving the future of AI and data through 
-              innovation and technical excellence.
+              innovation and technical excellence. killed at translating complex data into actionable insights for product, operational, and executive teams, with experience in Agile environments and a strong focus on data quality, governance, and stakeholder collaboration.
             </p>
             
             {/* Decorative line for desktop */}

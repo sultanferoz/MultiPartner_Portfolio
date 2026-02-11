@@ -27,7 +27,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="herosection bgGridLines  h-screen  relative pt-32 lg:pt-16 pb-4 px-6   flex items-start">
+    <section className="dark-section herosection bgGridLines  h-screen  relative pt-32 lg:pt-16 pb-4 px-6   flex items-start">
       <div className="max-w-7xl mx-auto w-full self-center relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}

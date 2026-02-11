@@ -157,6 +157,21 @@
   will-change: opacity;
 }
 
+.portfolio {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("/portfolio/me.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;   
+  
+  width: 100%;
+  min-height: 100vh;
+}
 
 
 
