@@ -34,7 +34,6 @@ export default function Navbar() {
         const rect = section.getBoundingClientRect();
 
         if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
-          
           // 🔹 Manual override for image/video sections
           if (section.classList.contains("dark-section")) {
             setTheme("dark");
@@ -70,8 +69,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const textColor =
-    theme === "dark" ? "text-white" : "text-black";
+  const textColor = theme === "dark" ? "text-white" : "text-black";
 
   return (
     <>
@@ -82,16 +80,10 @@ export default function Navbar() {
         className="fixed w-full z-50 bg-white/20 backdrop-blur-3xl border-b border-white/20 shadow-xl transition-colors duration-500"
       >
         <nav className="max-w-7xl mx-auto py-3 px-5 flex items-center justify-between">
-
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/">
-              <Image
-                src={logo}
-                alt="logo"
-                width={90}
-                height={90}
-              />
+              <Image src={logo} alt="logo" width={90} height={90} priority />
             </Link>
           </motion.div>
 
@@ -99,13 +91,19 @@ export default function Navbar() {
           <div
             className={`hidden md:flex items-center gap-16 text-lg font-medium transition-colors duration-500 ${textColor}`}
           >
-            <Link href="/" className="hover:opacity-70 transition-opacity">
+            <Link
+              href="/"
+              className="hover:opacity-70 transition-opacity"
+            >
               Home
             </Link>
             <Link href="/team" className="hover:opacity-70 transition-opacity">
               Team
             </Link>
-            <Link href="/portfolio" className="hover:opacity-70 transition-opacity">
+            <Link
+              href="/portfolio"
+              className="hover:opacity-70 transition-opacity"
+            >
               Portfolio
             </Link>
           </div>
@@ -115,13 +113,15 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={openModal}
-            className={`px-8 py-3 rounded-full font-bold bg-primary/60 hover:bg-primary ${textColor} hidden md:flex `}>
+            aria-label="Contact"
+            className={`px-8 py-3 rounded-full font-bold bg-primary/60 hover:bg-primary ${textColor} hidden md:flex `}
+          >
             Contact
           </motion.button>
 
           {/* Mobile Toggle */}
           <button
-          aria-label="toggle btn"
+            aria-label="toggle btn"
             className={`md:hidden w-10 h-10 flex items-center justify-center rounded-xl border transition-colors duration-500 ${textColor}`}
             onClick={() => setOpen(!open)}
           >
@@ -137,20 +137,35 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="md:hidden bg-white/20 backdrop-blur-md border border-white/20 shadow-xl rounded-3xl mt-2 px-6 py-4"
           >
-            <div className={`flex flex-col items-center gap-4 text-lg font-medium ${textColor}`}>
-              <Link onClick={() => setOpen(false)} href="/" className="hover:opacity-70">
+            <div
+              className={`flex flex-col items-center gap-4 text-lg font-medium ${textColor}`}
+            >
+              <Link
+                onClick={() => setOpen(false)}
+                href="/"
+                className="hover:opacity-70"
+              >
                 Home
               </Link>
-              <Link onClick={() => setOpen(false)} href="/team" className="hover:opacity-70">
+              <Link
+                onClick={() => setOpen(false)}
+                href="/team"
+                className="hover:opacity-70"
+              >
                 Team
               </Link>
-              <Link onClick={() => setOpen(false)} href="/portfolio" className="hover:opacity-70">
+              <Link
+                onClick={() => setOpen(false)}
+                href="/portfolio"
+                className="hover:opacity-70"
+              >
                 Portfolio
               </Link>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label="Contact"
                 onClick={() => {
                   setOpen(false);
                   openModal();

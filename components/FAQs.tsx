@@ -37,7 +37,7 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-6 bg-muted mb-[80px]" id="faq">
+    <section className="py-20 px-6 bg-blue mb-[80px]" id="faq">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
@@ -67,7 +67,6 @@ export default function FAQs() {
             viewport={{ once: true }}
             className="relative   space-y-4 overflow-hidden  "
           >
-            {/* <div className="pointer-events-none absolute rounded-2xl  top-1 left-0 w-full h-12 bg-gradient-to-b from-white/80 to-transparent blur-lg z-10" /> */}
 
             {faqs_section.map((faq, index) => {
               const isOpen = openIndex === index;
@@ -89,7 +88,7 @@ export default function FAQs() {
                     <motion.span
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
-                      className="flex items-center justify-center p-2 rounded-[50px] bg-muted text-white"
+                      className="flex items-center justify-center p-2 rounded-[50px] bg-blue text-white"
                     >
                       <ChevronUp size={16} />
                     </motion.span>
@@ -111,7 +110,6 @@ export default function FAQs() {
                 </motion.div>
               );
             })}
-            {/* <div className="pointer-events-none rounded-2xl  absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white/30 to-transparent blur-2xl z-10" /> */}
            
           </motion.div>
         </div>

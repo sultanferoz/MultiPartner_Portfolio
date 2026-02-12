@@ -46,6 +46,7 @@ export default function Footer() {
                   width={80}
                   height={80}
                   className="rounded-xl"
+                  priority
                 />
               </Link>
             </motion.div>
@@ -115,6 +116,7 @@ export default function Footer() {
               <motion.a
                 key={i}
                 href={href}
+                aria-label="noopener noreferrer"
                 target={href.startsWith('http') ? "_blank" : undefined}
                 rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
                 whileHover={{ y: -4, color: "#c4e962" }}

@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col bg-muted items-center justify-center text-black w-full py-8 min-h-[90vh] overflow-hidden relative px-4"
+      className="flex flex-col bg-blue items-center justify-center text-black w-full py-8 min-h-[90vh] overflow-hidden relative px-4"
     >
       <header className="w-full text-center py-4 z-10">
         <h2 className="text-3xl md:text-[42px] lg:text-5xl font-bold text-primary leading-tight">
@@ -66,8 +66,8 @@ const Projects: React.FC = () => {
             onClick={() => setActiveIndex(index)}
             className={`relative transition-all duration-500 ease-in-out rounded-3xl overflow-hidden shadow-md cursor-pointer 
               ${activeIndex === index 
-                ? "flex-[5] md:flex-[4] opacity-100" // Active grows
-                : "flex-1 md:flex-[0.5] opacity-60" // Inactive shrinks
+                ? "flex-[5] md:flex-[4] opacity-100" 
+                : "flex-1 md:flex-[0.5] opacity-60"
               }`}
           >
             <Image

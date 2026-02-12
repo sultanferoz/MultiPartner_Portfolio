@@ -136,7 +136,7 @@ export default function PortfolioData() {
           className="mb-16"
         >
           <div className="flex flex-col md:flex-row justify-between gap-10">
-            <h2 className=" text-[42px] lg:text-5xl font-bold text-muted leading-tight lg:leading-normal">
+            <h2 className=" text-[42px] lg:text-5xl font-bold text-blue leading-tight lg:leading-normal">
              Our 
               <span className="block text-secondary">
                  Portfolio of Works
@@ -155,6 +155,7 @@ export default function PortfolioData() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label="Load More"
                     onClick={() =>
                       setVisibleCount((prev) => prev + FEATURES_PER_LOAD)
                     }
@@ -168,6 +169,7 @@ export default function PortfolioData() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label="Load less"
                     onClick={() => setVisibleCount(FEATURES_PER_LOAD)}
                     className="px-8 py-3 border border-[#1a2332] text-[#1a2332] rounded-full font-semibold hover:bg-[#1a2332] hover:text-white transition-colors"
                   >
@@ -194,12 +196,13 @@ export default function PortfolioData() {
                 viewport={{ once: true }}
                 whileHover={{ y: -6 }}
               >
-                <div className="h-full rounded-2xl p-8 bg-white text-secondary border-l-4 border-muted shadow-lg hover:bg-muted hover:text-card hover:border-primary transition-all">
+                <div className="h-full rounded-2xl p-8 bg-white text-secondary border-l-4 border-blue shadow-lg hover:bg-blue hover:text-card hover:border-primary transition-all">
                   <p className="text-4xl mb-4">{feature.icon}</p>
 
                   {/* Clickable Title */}
                   <a
                     
+                    aria-label="feature title"
                     rel="noopener noreferrer"
                     className="block text-lg font-bold mb-3 hover:text-primary hover:pl-2 hover:border-l-2 hover:border-primary hover:underline underline-offset-4"
                   >

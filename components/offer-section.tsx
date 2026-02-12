@@ -33,7 +33,7 @@ export default function OfferSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl bg-muted px-2 lg:px-4"
+          className="relative rounded-3xl bg-blue px-2 lg:px-4"
         >
           <div className="relative bgGridLines z-10 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
             <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
@@ -41,8 +41,6 @@ export default function OfferSection() {
               <br />
               <span className="text-secondary">Let's Talk!</span>
             </h2>
-
-            {/* CENTER IMAGE */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -59,8 +57,6 @@ export default function OfferSection() {
                 className="w-full h-full object-cover object-start"
               />
             </motion.div>
-
-            {/* RIGHT CONTENT */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -77,8 +73,6 @@ export default function OfferSection() {
               >
                Do you have a project We can help you with? Let's talk about it.
               </motion.p>
-
-              {/* INPUT GROUP */}
               <div className="w-full max-w-sm mt-4">
                 <div className="mb-20 md:mb-0 flex items-center w-full rounded-full p-1 bg-gradient-to-r from-[#1e9fa8]/70 to-[#1a7f8f]/70 backdrop-blur-md border border-white/20 shadow-lg">
                   <TextField
@@ -105,6 +99,7 @@ export default function OfferSection() {
 
                   <motion.button
                     onClick={handleSubmit}
+                    aria-label="handleSubmit"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="

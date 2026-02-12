@@ -79,7 +79,7 @@ export default function FeaturesSection() {
           className="mb-16"
         >
           <div className="flex flex-col md:flex-row justify-between gap-10">
-            <h2 className=" text-[42px] lg:text-5xl font-bold text-muted leading-tight lg:leading-normal">
+            <h2 className=" text-[42px] lg:text-5xl font-bold text-blue leading-tight lg:leading-normal">
               Our
               <span className="block text-secondary">Portfolio Of Works</span>
             </h2>
@@ -96,6 +96,8 @@ export default function FeaturesSection() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+
+            aria-label="Load More"
                     onClick={() =>
                       setVisibleCount((prev) => prev + FEATURES_PER_LOAD)
                     }
@@ -110,6 +112,7 @@ export default function FeaturesSection() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setVisibleCount(FEATURES_PER_LOAD)}
+                      aria-label="Load less"
                     className="px-8 py-3 border border-[#1a2332] text-[#1a2332] rounded-full font-semibold hover:bg-[#1a2332] hover:text-white transition-colors"
                   >
                     Load Less

@@ -32,7 +32,7 @@ export default function TeamMembersSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-[42px] lg:text-5xl font-bold  text-muted tracking-tight leading-[1.1]">
+            <h2 className="text-[42px] lg:text-5xl font-bold  text-blue tracking-tight leading-[1.1]">
               Our <br className="hidden lg:block" />
               <span className="text-secondary">Visionaries</span>
             </h2>
@@ -62,10 +62,11 @@ export default function TeamMembersSection() {
                 <Image
                   src={member.image}
                   alt={member.name}
+                  priority
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-muted/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
                 
                 {/* Role Badge */}
                 <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-2xl border border-black/20 px-4 py-2 rounded-full">
@@ -78,7 +79,7 @@ export default function TeamMembersSection() {
               {/* Floating Info Box */}
               <div className="mt-[-120px] relative z-10 px-4 sm:px-8">
                 <div className="bg-white p-6 sm:p-8 rounded-[2rem] shadow-xl border border-gray-100 transition-all duration-300 group-hover:border-secondary/30 group-hover:translate-y-[-5px]">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-muted group-hover:text-secondary transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-blue group-hover:text-secondary transition-colors">
                     {member.name}
                   </h3>
                   <p className="text-secondary font-bold text-sm sm:text-base mb-4">
@@ -88,7 +89,7 @@ export default function TeamMembersSection() {
                     {member.bio}
                   </p>
                   
-                  <div className="mt-6 flex items-center text-muted font-black text-xs uppercase tracking-[0.2em] group-hover:text-secondary transition-all">
+                  <div className="mt-6 flex items-center text-blue font-black text-xs uppercase tracking-[0.2em] group-hover:text-secondary transition-all">
                     View Full Profile 
                     <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
                   </div>

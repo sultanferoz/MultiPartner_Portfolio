@@ -80,7 +80,7 @@ export default function PortfolioPage() {
           className="max-w-3xl"
         >
           
-           <h2 className="text-[42px] lg:text-5xl font-bold  text-muted tracking-tight leading-[1.1] mb-4">
+           <h2 className="text-[42px] lg:text-5xl font-bold  text-blue tracking-tight leading-[1.1] mb-4">
               Selected {" "}
               <span className="text-card">Works</span>
             </h2>
@@ -120,6 +120,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         <Image
           src={project.images[0]}
           alt={project.title}
+          priority
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
@@ -156,10 +157,10 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       {/* Content */}
       <div className="p-6 flex justify-between items-start">
         <div>
-          <span className="text-[10px]  uppercase tracking-[0.2em] text-muted mb-2 block">
+          <span className="text-[10px]  uppercase tracking-[0.2em] text-blue mb-2 block">
             {project.category || "Case Study"}
           </span>
-          <h3 className="text-xl font-semibold text-muted group-hover:text-secondary transition-colors">
+          <h3 className="text-xl font-semibold text-blue group-hover:text-secondary transition-colors">
             {project.title}
           </h3>
         </div>

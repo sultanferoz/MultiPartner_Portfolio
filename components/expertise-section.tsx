@@ -147,9 +147,9 @@ export default function ExpertiseSection() {
                     {[...col, ...col].map((item, i) => {
                       let bgClass = "bg-white";
                       if (colIndex % 2 === 0) {
-                        if (i % 2 === 0) bgClass = "bg-muted text-white";
+                        if (i % 2 === 0) bgClass = "bg-blue text-white";
                       } else {
-                        if (i % 2 !== 0) bgClass = "bg-muted text-white";
+                        if (i % 2 !== 0) bgClass = "bg-blue text-white";
                       }
 
                       return (

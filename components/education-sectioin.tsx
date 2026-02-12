@@ -87,7 +87,7 @@ export default function EducationAndCerts() {
           className="text-center"
         >
           <h2 className="text-[32px] lg:text-[48px] font-bold text-secondary mb-4">
-            <span className="text-muted">My</span> Education
+            <span className="text-blue">My</span> Education
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
             Academic foundations that power our data science, AI, and automation work.
@@ -128,7 +128,7 @@ export default function EducationAndCerts() {
           className="text-center"
         >
           <h2 className="text-[32px] lg:text-[48px] font-bold text-secondary mb-4">
-            <span className="text-muted">Professional</span> Certificates
+            <span className="text-blue">Professional</span> Certificates
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
             My completed SheCodes courses with verified certificates and reviews.
@@ -153,7 +153,7 @@ export default function EducationAndCerts() {
                 </div>
                 <p className="text-gray-600 italic mb-4">“{cert.review}”</p>
                 <div className="flex gap-4">
-                  <Link href={cert.certs} target="_blank" className="px-4 py-2 bg-secondary text-white rounded-full hover:bg-muted transition">
+                  <Link href={cert.certs} target="_blank" className="px-4 py-2 bg-secondary text-white rounded-full hover:bg-blue transition">
                     View Certificate
                   </Link>
                 </div>
@@ -164,6 +164,7 @@ export default function EducationAndCerts() {
                   alt={cert.title}
                   width={500}
                   height={300}
+                  priority
                   className="rounded-xl border border-gray-200 shadow-md"
                 />
               </div>

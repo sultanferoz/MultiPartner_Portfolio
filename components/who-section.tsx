@@ -17,7 +17,7 @@ export default function WhoAmI() {
           className="text-center mb-16"
         >
           <h2 className="text-[32px] lg:text-[48px] font-bold text-secondary  mb-4">
-              <span className="text-muted">Damilola </span>
+              <span className="text-blue">Damilola </span>
               {" "}
               Emiola
             </h2>

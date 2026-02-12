@@ -15,8 +15,8 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: #1a2332;
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: #239ba4;
-  --muted-foreground: oklch(0.556 0 0);
+  --blue: #239ba4;
+  --blue-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -60,8 +60,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-blue: var(--blue);
+  --color-blue-foreground: var(--blue-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
@@ -132,7 +132,7 @@
 
 .bgGridLines {
   position: relative;
-  background-color:var(--muted);
+  background-color:var(--blue);
   overflow: hidden;
   border-radius: 50px 50px 0 0;
 }
