@@ -2,9 +2,9 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import "../globals.css"
 import PortfolioPage from "@/components/portfolio-section";
-import PortfolioData from "@/components/porfolio-data";
 import OfferSection from "@/components/offer-section";
 import Projects from "@/components/showchase-section";
+import FeaturesSection from "@/components/features-section";
 
 export default function TeamPage() {
   return (
@@ -12,7 +12,7 @@ export default function TeamPage() {
       <Navbar />
       <PortfolioPage/>
       <Projects/>
-      <PortfolioData/>
+      <FeaturesSection />
       <OfferSection/>
       <Footer />
     </main>

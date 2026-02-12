@@ -11,49 +11,49 @@ const features = [
     title: "Data Visualization",
     description:
       "The Customer Management Portal was built to make customer information more accessible to the business’s customer experience team.",
-    url: "/portfolio",
+    url: "https://clammy-tent-c59.notion.site/Power-BI-Customer-Management-Portal-4d133a7dea7f486bbd29fa22975c2e5a",
   },
   {
     icon: "🧩",
     title: "Bespoke Applications",
     description:
       "The project management office required a dynamic platform on which they could capture their weekly project status for reporting purposes.",
-    url: "/portfolio",
+    url: "https://clammy-tent-c59.notion.site/Power-Apps-PMO-Weekly-Reporting-App-4185a7c216214957b99a774ddda55a6c",
   },
   {
     icon: "💼",
     title: "Web Apps",
     description:
       "This investment dashboard back-end plug-in enables customers to view returns on their investments over a 10-year period.",
-    url: "/portfolio",
+    url: "https://clammy-tent-c59.notion.site/Back-End-Web-Plug-In-Investment-Management-Dashboard-8e417d4ec12644b983baa510206a4b9c",
   },
   {
     icon: "🧠",
     title: "Deep Learning",
     description:
       "Natural images classification using convolutional neural networks for predictive modelling.",
-    url: "/portfolio",
+    url: "https://clammy-tent-c59.notion.site/Deep-Learning-Natural-Images-Predictive-Modelling-40d4f1572de84e55b09b21e4e4192ceb",
   },
   {
     icon: "💰",
     title: "Domain Price Prediction Model",
     description:
       "A machine learning model that predicts prices of newly registered domain names using multiple algorithms.",
-    url: "/portfolio",
+    url: "https://colab.research.google.com/drive/1X_oHPsZwcjjU7J9BdO5crDkKYviAnRfG#scrollTo=HuwgmRq6cik4",
   },
   {
     icon: "📈",
     title: "Time Series Analysis",
     description:
       "Time series analysis on blogging activity data to identify trends, seasonality, and publishing behavior.",
-    url: "/portfolio",
+    url: "https://colab.research.google.com/drive/1nkHQ2tnxLs-KFMG3vLYRrU47VmIRWU5T#scrollTo=-L0beDGzD28S",
   },
   {
     icon: "👁️",
     title: "Computer Vision",
     description:
       "Computer vision system for detecting distress in asphalt pavement images using deep learning techniques.",
-    url: "/portfolio",
+    url: "https://clammy-tent-c59.notion.site/Computer-Vision-Distress-Detection-in-Asphalt-Pavement-Images-Abridged-Research-Paper-ddce266eebb042b88c42042ccd4d086c",
   },
 ];
 
@@ -166,6 +166,7 @@ export default function FeaturesSection() {
                 <div className="mt-8 pt-6 border-t border-[#1a2332]/5">
                   <a
                     href={feature.url}
+                    target="blank"
                     aria-label="Explore Case Study"
                     className="inline-flex items-center text-xs uppercase tracking-widest font-bold text-[#1a2332] group/link"
                   >

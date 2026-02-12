@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser"; 
 import { Phone } from "lucide-react";
 
 interface ContactFormProps {
@@ -16,38 +17,39 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form.honeypot) return;
     
     setStatus("loading");
 
-    // 1. Construct the Subject and Body
-    const subject = `Contact Request from ${form.name}`;
-    const body = `Hello DCode Team,\n\n` +
-                 `You have received a new inquiry via the website contact form:\n\n` +
-                 `Name: ${form.name}\n` +
-                 `Email: ${form.email}\n\n` +
-                 `Message:\n${form.message}\n\n` +
-                 `---`;
-
-    // 2. Format the Mailto Link
-    // Using encodeURIComponent ensures spaces and symbols don't break the URL
-    const mailtoUrl = `mailto:info@dcodeanalytics.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Replace these strings with your actual EmailJS IDs from your dashboard
+    const SERVICE_ID = "service_5yds90i";
+    const TEMPLATE_ID = "template_cy7t1d7";
+    const PUBLIC_KEY = "as9Gdlg-gHrmfJ4Vp";
 
     try {
-      // 3. Trigger the redirect
-      window.location.href = mailtoUrl;
-      
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          reply_to: form.email, 
+        },
+        PUBLIC_KEY
+      );
+
       setStatus("success");
       if (onSuccess) onSuccess();
-
-      // Reset form and status after a short delay
       setTimeout(() => {
         setForm({ name: "", email: "", message: "", honeypot: "" });
         setStatus("idle");
       }, 3000);
+
     } catch (err) {
+      console.error("EmailJS Error:", err);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
     }
@@ -145,8 +147,32 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     : "bg-primary text-secondary hover:shadow-primary/20"}
                   disabled:opacity-70 disabled:cursor-not-allowed`}
               >
-                {status === "loading" ? "Opening Mail..." : status === "success" ? "✓ Mail Opened" : "Launch Inquiry"}
+                {status === "loading" ? (
+                   <span className="flex items-center justify-center gap-2">
+                     <svg className="animate-spin h-5 w-5 text-current" viewBox="0 0 24 24">
+                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                     </svg>
+                     Sending...
+                   </span>
+                ) : status === "success" ? (
+                  "✓ Message Sent"
+                ) : (
+                  "Launch Inquiry"
+                )}
               </motion.button>
+
+              <AnimatePresence>
+                {status === "error" && (
+                  <motion.p 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-red-400 text-center text-xs mt-2"
+                  >
+                    Error sending message. Please try again.
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </form>
           </div>
         </div>
