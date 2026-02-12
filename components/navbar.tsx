@@ -91,9 +91,6 @@ export default function Navbar() {
                 alt="logo"
                 width={90}
                 height={90}
-                className={`transition duration-500 ${
-                  theme === "dark" ? "invert" : ""
-                }`}
               />
             </Link>
           </motion.div>
@@ -124,6 +121,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
+          aria-label="toggle btn"
             className={`md:hidden w-10 h-10 flex items-center justify-center rounded-xl border transition-colors duration-500 ${textColor}`}
             onClick={() => setOpen(!open)}
           >
@@ -188,6 +186,7 @@ export default function Navbar() {
               >
                 <button
                   onClick={closeModal}
+                  aria-label="close Form"
                   className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white z-40"
                 >
                   <X className="w-5 h-5" />

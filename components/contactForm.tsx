@@ -2,10 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import {
-  Phone,
-} from "lucide-react";
+import { Phone } from "lucide-react";
 
 interface ContactFormProps {
   onSuccess?: () => void;
@@ -19,28 +16,37 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (form.honeypot) return;
     
     setStatus("loading");
 
-    try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          message: form.message,
-          reply_to: form.email,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
+    // 1. Construct the Subject and Body
+    const subject = `Contact Request from ${form.name}`;
+    const body = `Hello DCode Team,\n\n` +
+                 `You have received a new inquiry via the website contact form:\n\n` +
+                 `Name: ${form.name}\n` +
+                 `Email: ${form.email}\n\n` +
+                 `Message:\n${form.message}\n\n` +
+                 `---`;
 
+    // 2. Format the Mailto Link
+    // Using encodeURIComponent ensures spaces and symbols don't break the URL
+    const mailtoUrl = `mailto:info@dcodeanalytics.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    try {
+      // 3. Trigger the redirect
+      window.location.href = mailtoUrl;
+      
       setStatus("success");
-      setForm({ name: "", email: "", message: "", honeypot: "" });
-      if (onSuccess) setTimeout(onSuccess, 3000);
+      if (onSuccess) onSuccess();
+
+      // Reset form and status after a short delay
+      setTimeout(() => {
+        setForm({ name: "", email: "", message: "", honeypot: "" });
+        setStatus("idle");
+      }, 3000);
     } catch (err) {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
@@ -48,7 +54,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto ">
+    <div className="relative w-full max-w-4xl mx-auto">
       <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 blur-[100px] rounded-full" />
       
       <motion.div
@@ -57,6 +63,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl"
       >
         <div className="grid grid-cols-1 md:grid-cols-5">
+          {/* Sidebar */}
           <div className="md:col-span-2 bg-primary/5 p-8 md:p-12 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10">
             <div>
               <h2 className="text-4xl font-extrabold tracking-tight text-white mb-4">
@@ -69,23 +76,28 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             
             <div className="mt-12 space-y-4">
               <div className="flex items-center gap-4 text-sm text-white">
-                
-                <span className="p-2 text-card rounded-full bg-white/5 flex items-center justify-center border border-white/10"><Phone/></span>
-                +447831997881
+                <span className="p-2 text-card rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+                  <Phone size={16}/>
+                </span>
+                +44 (783) 199 7881
               </div>
               <div className="flex items-center gap-4 text-sm text-white">
-               <span className="p-2 text-card rounded-full bg-white/5 flex items-center justify-center border border-white/10"><Phone/></span>
-                +2349024892746
+                <span className="p-2 text-card rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+                  <Phone size={16}/>
+                </span>
+                +234 (902) 489 2746
               </div>
             </div>
           </div>
+
+          {/* Form Section */}
           <div className="md:col-span-3 p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-5">
               <input type="text" name="honeypot" value={form.honeypot} onChange={handleChange} className="hidden" />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider text-white text-sm ml-1">Full Name</label>
+                  <label className="text-xs font-semibold uppercase tracking-wider text-white ml-1">Full Name</label>
                   <input
                     type="text"
                     name="name"
@@ -93,11 +105,11 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Jane Doe"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider text-white text-sm ml-1">Email</label>
+                  <label className="text-xs font-semibold uppercase tracking-wider text-white ml-1">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -105,12 +117,12 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="jane@studio.com"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all"
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-white text-sm ml-1">Your Message</label>
+                <label className="text-xs font-semibold uppercase tracking-wider text-white ml-1">Your Message</label>
                 <textarea
                   name="message"
                   required
@@ -118,9 +130,10 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project goals..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all resize-none"
                 />
               </div>
+
               <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
@@ -132,32 +145,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     : "bg-primary text-secondary hover:shadow-primary/20"}
                   disabled:opacity-70 disabled:cursor-not-allowed`}
               >
-                {status === "loading" ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="animate-spin h-5 w-5 text-current" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Processing...
-                  </span>
-                ) : status === "success" ? (
-                  "✓ Message Sent"
-                ) : (
-                  "Launch Inquiry"
-                )}
+                {status === "loading" ? "Opening Mail..." : status === "success" ? "✓ Mail Opened" : "Launch Inquiry"}
               </motion.button>
-              <AnimatePresence>
-                {status === "error" && (
-                  <motion.p 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="text-red-400 text-center text-sm font-medium"
-                  >
-                    Something went wrong. Please try again.
-                  </motion.p>
-                )}
-              </AnimatePresence>
             </form>
           </div>
         </div>

@@ -79,6 +79,7 @@ export default function FAQs() {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
+                    aria-label="faqs acr"
                     className="w-full flex items-center justify-between gap-2 p-5 text-left"
                   >
                     <span className="font-semibold text-[#1a2332] text-sm lg:text-base">

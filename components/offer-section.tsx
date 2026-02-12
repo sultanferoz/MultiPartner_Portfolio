@@ -20,7 +20,7 @@ export default function OfferSection() {
     const subject = "New Contact Request";
     const body = `Hello,\n\nMy email is: ${email}\n\nI would like to get in touch.`;
 
-    window.location.href = `mailto:damilola.emiola@xxx.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:info@dcodeanalytics.xyz.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   };

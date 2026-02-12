@@ -174,6 +174,7 @@ export default function EducationAndCerts() {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
+              aria-label="Load cta"
               className="px-6 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary/80 transition"
             >
               {showAll ? "Load Less" : "Load More"}

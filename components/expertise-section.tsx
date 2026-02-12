@@ -116,7 +116,6 @@ export default function ExpertiseSection() {
     <section className="pt-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Left Content */}
           <div>
             <h2 className="text-[42px] lg:text-[48px] font-bold text-[#1a2332] mb-8">
               <span className="text-[#4a9ba5]">Achievements &</span>
