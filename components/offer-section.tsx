@@ -35,7 +35,7 @@ export default function OfferSection() {
           viewport={{ once: true }}
           className="relative rounded-3xl bg-blue px-2 lg:px-4"
         >
-          <div className="relative bgGridLines z-10 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
+          <div className="relative bgGridLines grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-12 overflow-visible">
             <h2 className="text-2xl md:text-4xl font-bold text-primary text-center pt-4">
               Have a Idea?
               <br />
@@ -46,7 +46,7 @@ export default function OfferSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="hidden md:flex justify-start relative -top-4 -left-21 w-64 h-80 md:w-95 md:h-100"
+              className="hidden md:flex justify-start relative top-0   -left-21 w-64 h-80 md:w-95 md:h-100  "
             >
               <Image
                 src="/professional-woman-in-business-outfit-pointing.webp"
