@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser"; 
 import { Phone } from "lucide-react";
 
 interface ContactFormProps {
@@ -16,40 +17,38 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form.honeypot) return;
     
     setStatus("loading");
 
+    const SERVICE_ID = "service_bppcwtk";
+    const TEMPLATE_ID = "template_cy7t1d7";
+    const PUBLIC_KEY = "as9Gdlg-gHrmfJ4Vp";
+
     try {
-      // Configuration for the mailto link
-      const recipient = "your-email@example.com"; // Replace with your email
-      const subject = encodeURIComponent(`New Inquiry from ${form.name}`);
-      const body = encodeURIComponent(
-        `Name: ${form.name}\n` +
-        `Email: ${form.email}\n\n` +
-        `Message:\n${form.message}`
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          reply_to: form.email, 
+        },
+        PUBLIC_KEY
       );
 
-      // Create the mailto URL
-      const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-      // Trigger the email client
-      window.location.href = mailtoUrl;
-
-      // Update UI state
       setStatus("success");
       if (onSuccess) onSuccess();
-
-      // Reset form after a short delay
       setTimeout(() => {
         setForm({ name: "", email: "", message: "", honeypot: "" });
         setStatus("idle");
       }, 3000);
 
     } catch (err) {
-      console.error("Mailto Error:", err);
+      console.error("EmailJS Error:", err);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
     }
@@ -139,7 +138,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
               <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                disabled={status === "success"}
+                disabled={status === "loading" || status === "success"}
                 type="submit"
                 className={`w-full py-4 rounded-2xl font-bold text-sm uppercase tracking-widest transition-all shadow-xl
                   ${status === "success" 
@@ -147,7 +146,19 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     : "bg-primary text-secondary hover:shadow-primary/20"}
                   disabled:opacity-70 disabled:cursor-not-allowed`}
               >
-                {status === "success" ? "✓ Client Opened" : "Launch Inquiry"}
+                {status === "loading" ? (
+                   <span className="flex items-center justify-center gap-2">
+                     <svg className="animate-spin h-5 w-5 text-current" viewBox="0 0 24 24">
+                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                     </svg>
+                     Sending...
+                   </span>
+                ) : status === "success" ? (
+                  "✓ Message Sent"
+                ) : (
+                  "Launch Inquiry"
+                )}
               </motion.button>
 
               <AnimatePresence>
@@ -157,7 +168,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     animate={{ opacity: 1 }}
                     className="text-red-400 text-center text-xs mt-2"
                   >
-                    Something went wrong.
+                    Error sending message. Please try again.
                   </motion.p>
                 )}
               </AnimatePresence>

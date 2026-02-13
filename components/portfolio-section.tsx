@@ -70,7 +70,7 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <main className="min-h-screen portfolio bg-[#fafafa] pt-32 pb-20 px-6">
+    <main id="dark-section " className="min-h-screen portfolio  pt-32 pb-20 px-6">
       {/* Header Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <motion.div

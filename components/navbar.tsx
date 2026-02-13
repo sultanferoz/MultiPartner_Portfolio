@@ -4,14 +4,15 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/public/favicon.webp";
+import logoLight from "@/public/light.webp";
+import logoDark from "@/public/dark.webp";
 import Image from "next/image";
 import ContactForm from "./contactForm";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   const openModal = () => {
     setShowModal(true);
@@ -22,10 +23,8 @@ export default function Navbar() {
     setShowModal(false);
     document.body.style.overflow = "auto";
   };
-
-  // 🔥 AUTO DETECT BACKGROUND BRIGHTNESS
   useEffect(() => {
-    const navbarHeight = 100; // adjust if needed
+    const navbarHeight = 100;
 
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -34,10 +33,10 @@ export default function Navbar() {
         const rect = section.getBoundingClientRect();
 
         if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
-          // 🔹 Manual override for image/video sections
           if (section.classList.contains("dark-section")) {
             setTheme("dark");
-            return;
+          } else {
+            setTheme("light");
           }
 
           const style = window.getComputedStyle(section);
@@ -83,7 +82,14 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/">
-              <Image src={logo} alt="logo" width={90} height={90} priority />
+              <Image
+                src={theme === "dark" ? logoLight : logoDark}
+                alt="logo"
+                width={90}
+                height={90}
+                priority
+                className="transition-opacity duration-500"
+              />
             </Link>
           </motion.div>
 
@@ -91,10 +97,7 @@ export default function Navbar() {
           <div
             className={`hidden md:flex items-center gap-16 text-lg font-medium transition-colors duration-500 ${textColor}`}
           >
-            <Link
-              href="/"
-              className="hover:opacity-70 transition-opacity"
-            >
+            <Link href="/" className="hover:opacity-70 transition-opacity">
               Home
             </Link>
             <Link href="/team" className="hover:opacity-70 transition-opacity">

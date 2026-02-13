@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
   return (
-    <main className="w-full overflow-hidden min-h-screen">
+    <main className="w-full min-h-screen" id="dark-section ">
       <Navbar />
       <PortfolioPage/>
       <Projects/>

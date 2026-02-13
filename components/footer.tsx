@@ -7,7 +7,7 @@ import {
   Twitter,
   Phone,
 } from "lucide-react";
-import logo from "@/public/favicon.webp";
+import logo from "@/public/light.webp";
 import Image from "next/image";
 import Link from "next/link";
 
