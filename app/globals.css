@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color system for Urit theme */
   --background: #239ba4;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

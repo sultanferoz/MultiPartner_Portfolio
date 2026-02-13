@@ -71,7 +71,7 @@ export default function PortfolioPage() {
 
   return (
     <main id="dark-section " className="min-h-screen portfolio  pt-32 pb-20 px-6">
-      {/* Header Section */}
+
       <section className="max-w-7xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

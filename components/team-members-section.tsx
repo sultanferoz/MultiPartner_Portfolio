@@ -68,7 +68,7 @@ export default function TeamMembersSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
                 
-                {/* Role Badge */}
+            
                 <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-2xl border border-black/20 px-4 py-2 rounded-full">
                   <span className="text-secondary text-xs font-bold tracking-widest uppercase">
                     {member.role.split('&')[0]}

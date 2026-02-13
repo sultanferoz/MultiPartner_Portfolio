@@ -93,7 +93,6 @@ export default function Navbar() {
             </Link>
           </motion.div>
 
-          {/* Desktop Menu */}
           <div
             className={`hidden md:flex items-center gap-16 text-lg font-medium transition-colors duration-500 ${textColor}`}
           >
