@@ -135,7 +135,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/5 blur-[120px] z-10" />
     </footer>
   );
 }
