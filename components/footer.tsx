@@ -51,8 +51,7 @@ export default function Footer() {
               </Link>
             </motion.div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Solution-driven consulting that makes your data work harder,
-              smarter, faster BI Specialists.
+              Global collective of Data Scientists and AI Automation Developers delivering world class AI solutions.
             </p>
           </div>
 
