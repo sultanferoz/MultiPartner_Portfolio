@@ -6,7 +6,7 @@ import "./globals.css";
 const _Inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://multi-partner-portfolio.vercel.app"),
+  metadataBase: new URL("http://dcodeanalytics.xyz/"),
   title: {
     default: "DCode Analytics | AI & Data Science Solutions",
     template: "%s | DCode Analytics",

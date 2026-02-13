@@ -85,10 +85,10 @@ export default function FeaturesSection() {
             </h2>
 
             <div className="max-w-md">
-              <p className="text-gray-700 md:text-lg text-base">
+              {/* <p className="text-gray-700 md:text-lg text-base">
                 This portfolio will take you through my exhilarating journey
                 through the realms of data.
-              </p>
+              </p> */}
 
               {/* Buttons */}
               <div className="mt-8 flex gap-4">
